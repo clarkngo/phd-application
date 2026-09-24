@@ -23,8 +23,7 @@ const APPLICANT_PROFILE = {
       degree: "Master of Science in Computer Science (MSCS)",
       institution: "City University of Seattle",
       location: "Seattle, WA",
-      focus: "Cloud Systems, Full-Stack Architecture, Serverless Computing, DevSecOps & AI Workflows",
-      role: "Graduate Teaching Assistant & AWS Apprentice Grant Research Lead"
+      focus: "Cloud Systems, Full-Stack Architecture, Serverless Computing, DevSecOps & AI Workflows"
     },
     {
       degree: "Master of Business Administration (MBA)",
