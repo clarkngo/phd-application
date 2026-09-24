@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clark Ngo | PhD Application Tracker & Viability Engine</title>
+  <meta name="description" content="PhD Application Tracker and Academic Resume Viability Decision Engine for Clark Ngo — comparing UW iSchool, UW HCDE, and Seattle University.">
+  <meta name="author" content="Clark Ngo">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Clark Ngo — PhD Application Tracker & Viability Engine">
+  <meta property="og:description" content="Tracking and evaluating PhD program viability across UW iSchool, UW HCDE, and Seattle University.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">🎓</div>
+        <div class="brand-text">
+          <h1>Clark Ngo &bull; PhD Tracker</h1>
+          <p>Application & Viability Decision Engine &bull; Seattle, WA</p>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <div class="user-profile-badge">
+          <div class="badge-avatar">CN</div>
+          <span>Clark Ngo</span>
+        </div>
+
+        <button type="button" class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle theme">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar" aria-label="Main Navigation">
+    <div class="nav-container">
+      <button type="button" class="nav-tab active" data-target="tab-overview">
+        📊 Overview & Deadlines
+      </button>
+      <button type="button" class="nav-tab" data-target="tab-viability">
+        ⚖️ Viability & Resume Fit
+      </button>
+      <button type="button" class="nav-tab" data-target="tab-tracker">
+        📋 Application Checklists
+      </button>
+      <button type="button" class="nav-tab" data-target="tab-faculty">
+        🔬 Faculty Alignment
+      </button>
+      <button type="button" class="nav-tab" data-target="tab-profile">
+        👤 Clark's Academic Profile
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section & Countdown -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-grid">
+        <div class="hero-title-area">
+          <h2>Doctoral Application Strategy & Roadmap</h2>
+          <p>
+            Strategic evaluation and milestone management for <strong>Clark Ngo</strong>, MSCS graduate educator and systems engineer. 
+            Comparing the <strong>UW Information School (iSchool)</strong>, <strong>UW Human Centered Design & Engineering (HCDE)</strong>, and <strong>Seattle University</strong> to pinpoint the most viable, fully funded Ph.D. path.
+          </p>
+
+          <div class="profile-pill-links">
+            <a href="https://clarkngo.github.io" target="_blank" rel="noopener noreferrer" class="pill-link">
+              🌐 Portfolio (clarkngo.github.io)
+            </a>
+            <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer" class="pill-link">
+              💻 GitHub (@clarkngo)
+            </a>
+            <a href="https://www.linkedin.com/in/clarkngo/" target="_blank" rel="noopener noreferrer" class="pill-link">
+              💼 LinkedIn
+            </a>
+            <button type="button" class="pill-link" id="printSummaryBtn">
+              🖨️ Print Summary / PDF
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-countdown-box">
+          <div class="countdown-header">
+            <span class="countdown-title">Next Major Deadline</span>
+            <span class="countdown-badge">UW Annual Cycle</span>
+          </div>
+
+          <div class="countdown-timer">
+            <div class="time-unit">
+              <div class="time-val" id="cdDays">--</div>
+              <div class="time-label">Days</div>
+            </div>
+            <div class="time-unit">
+              <div class="time-val" id="cdHours">--</div>
+              <div class="time-label">Hours</div>
+            </div>
+            <div class="time-unit">
+              <div class="time-val" id="cdMins">--</div>
+              <div class="time-label">Minutes</div>
+            </div>
+            <div class="time-unit">
+              <div class="time-val" id="cdSecs">--</div>
+              <div class="time-label">Seconds</div>
+            </div>
+          </div>
+
+          <div class="countdown-note">
+            <span>⏰</span>
+            <span>Target: <strong>Dec 2, 2026 at 11:59 PM PT</strong> (UW iSchool & HCDE)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- TAB 1: OVERVIEW & DASHBOARD -->
+    <section class="tab-pane active" id="tab-overview">
+      <div class="section-header">
+        <h2>Target Doctoral Programs</h2>
+        <p>Side-by-side comparison of degrees, funding guarantees, GRE policies, and viability scores based on Clark's background.</p>
+      </div>
+
+      <div class="card-grid-3" id="dashboardProgramCards">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 2: VIABILITY & RESUME FIT -->
+    <section class="tab-pane" id="tab-viability">
+      <div class="section-header">
+        <h2>Resume Viability & Strategic Alignment</h2>
+        <p>In-depth analysis of how Clark's MSCS, industry software engineering, and university teaching experience match each program's admissions criteria.</p>
+      </div>
+
+      <div class="viability-layout">
+        <!-- Left: Interactive Weight Sliders -->
+        <aside class="calculator-sidebar">
+          <h3>Viability Weights</h3>
+          <p>Adjust priorities to recalibrate alignment scores based on what matters most to your academic goals:</p>
+
+          <div class="criteria-slider-group" id="criteriaSlidersContainer">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <button type="button" class="reset-weights-btn" id="resetWeightsBtn">
+            Reset to Baseline Priorities
+          </button>
+        </aside>
+
+        <!-- Right: Detailed SWOT & Positioning Breakdown -->
+        <div class="comparison-container" id="viabilityCardsContainer">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: APPLICATION CHECKLISTS -->
+    <section class="tab-pane" id="tab-tracker">
+      <div class="section-header">
+        <h2>Application Milestones & Checklists</h2>
+        <p>Track your Statements of Purpose, recommendation letters, transcripts, and custom milestones. Progress is automatically saved in your browser.</p>
+      </div>
+
+      <!-- Controls & Quick Metrics -->
+      <div class="tracker-controls-bar">
+        <div class="tracker-stats">
+          <div class="stat-metric">
+            <span class="stat-metric-val" id="statTotalTasks">0/0</span>
+            <span class="stat-metric-lbl">Checklist Tasks</span>
+          </div>
+          <div class="stat-metric">
+            <span class="stat-metric-val" id="statOverallPercent">0%</span>
+            <span class="stat-metric-lbl">Overall Readiness</span>
+          </div>
+          <div class="stat-metric">
+            <span class="stat-metric-val" id="statSubmitted">0/4</span>
+            <span class="stat-metric-lbl">Applications Ready</span>
+          </div>
+        </div>
+
+        <div class="tracker-actions">
+          <button type="button" class="btn btn-outline btn-sm" id="exportStateBtn">
+            💾 Export JSON Backup
+          </button>
+        </div>
+      </div>
+
+      <!-- Program Checklists -->
+      <div id="trackerProgramList">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 4: FACULTY ALIGNMENT -->
+    <section class="tab-pane" id="tab-faculty">
+      <div class="section-header">
+        <h2>Prospective Faculty Mentors & Research Labs</h2>
+        <p>Curated list of principal investigators (PIs) and research labs whose work connects directly to computing education, HCI, and socio-technical software systems.</p>
+      </div>
+
+      <div class="faculty-grid" id="facultyGridContainer">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+
+    <!-- TAB 5: APPLICANT PROFILE -->
+    <section class="tab-pane" id="tab-profile">
+      <div class="section-header">
+        <h2>Applicant Profile & Resume Mapping</h2>
+        <p>Synthesized credentials, teaching history, and research interests positioned for doctoral admissions committees.</p>
+      </div>
+
+      <div id="applicantProfileContainer">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <strong>Clark Ngo &bull; PhD Application Tracker</strong> &bull; Static Web App for GitHub Pages
+      </div>
+      <div class="footer-links">
+        <a href="https://clarkngo.github.io" target="_blank" rel="noopener noreferrer">Portfolio</a>
+        <a href="https://github.com/clarkngo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/clarkngo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
