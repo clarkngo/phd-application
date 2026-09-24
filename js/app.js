@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderViabilityView();
   renderTrackerView();
   renderFacultyView();
+  renderDossierView();
   renderProfileView();
   initViabilitySliders();
   initActionButtons();
@@ -547,6 +548,139 @@ function renderFacultyView() {
   `).join("");
 }
 
+// Render 2024 Application Dossier & Evolution View
+function renderDossierView() {
+  const container = document.getElementById("dossierArchiveContainer");
+  if (!container) return;
+
+  const d = APPLICATION_2024_DOSSIER;
+
+  container.innerHTML = `
+    <!-- Top Strategic Context Banner -->
+    <div class="summary-callout" style="margin-bottom: 2rem; border-left-color: var(--uw-purple);">
+      <strong>📁 Source Context: 2024 UW Information School Dossier (<code>reference-uw-2024-application</code>)</strong><br>
+      In your 2024 application cycle, you authored a full suite of materials proposing <em>Explainable Artificial Intelligence (XAI) in Educational Systems</em>. 
+      Below is the direct synthesis of your 2024 Statement of Purpose, Diversity Statement, Personal Statement, and Faculty Advisor justifications, paired with concrete upgrade strategies for your upcoming applications across <strong>UW iSchool</strong>, <strong>UW HCDE</strong>, and <strong>Seattle University</strong>.
+    </div>
+
+    <!-- Core Essay Cards Grid -->
+    <div class="dossier-grid">
+      <!-- 1. Statement of Purpose Card -->
+      <div class="dossier-card">
+        <div class="dossier-card-head">
+          <span class="dossier-tag">Research Agenda</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">${d.sop.targetDegree}</span>
+        </div>
+        <h3>${d.sop.title}</h3>
+        <p style="font-size: 0.9rem; color: var(--accent-blue); font-weight: 600; margin-bottom: 0.5rem;">
+          Theme: ${d.sop.coreTheme}
+        </p>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          ${d.sop.summary}
+        </p>
+
+        <div class="dossier-quote-box">
+          ${d.sop.keyQuotes.map(q => `<p style="margin-bottom: 0.5rem;">"${q}"</p>`).join("")}
+        </div>
+
+        <div class="evolution-box">
+          <h4>🚀 Strategic Evolution for Next Cycle</h4>
+          <ul>
+            ${d.sop.upgradeRecommendations.map(r => `<li>${r}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <!-- 2. Diversity, Equity & Inclusion Statement Card -->
+      <div class="dossier-card">
+        <div class="dossier-card-head">
+          <span class="dossier-tag" style="background-color: #dcfce7; color: #15803d;">Diversity & Equity</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">Lived Experience</span>
+        </div>
+        <h3>${d.diversityStatement.title}</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          ${d.diversityStatement.narrativeArc}
+        </p>
+
+        <div style="background-color: var(--bg-tertiary); border-radius: var(--radius-md); padding: 0.85rem 1.1rem; margin-bottom: 1rem;">
+          <strong style="font-size: 0.85rem; color: var(--text-primary); display: block; margin-bottom: 0.4rem;">Key Mentorship Impact Metrics:</strong>
+          <ul style="list-style: disc; padding-left: 1.2rem; font-size: 0.82rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
+            ${d.diversityStatement.impactMetrics.map(m => `<li>${m}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="evolution-box">
+          <h4>🚀 Strategic Evolution for Next Cycle</h4>
+          <ul>
+            ${d.diversityStatement.upgradeRecommendations.map(r => `<li>${r}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal Statement & Faculty Endorsements Grid -->
+    <div class="dossier-grid">
+      <!-- 3. Personal Statement Card -->
+      <div class="dossier-card">
+        <div class="dossier-card-head">
+          <span class="dossier-tag" style="background-color: var(--uw-gold-subtle); color: var(--uw-gold-dark);">Academic Journey</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">${d.personalStatement.length}</span>
+        </div>
+        <h3>${d.personalStatement.title}</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+          ${d.personalStatement.narrativeArc}
+        </p>
+
+        <div style="background-color: var(--bg-tertiary); border-radius: var(--radius-md); padding: 0.85rem 1.1rem; margin-bottom: 1rem;">
+          <strong style="font-size: 0.85rem; color: var(--text-primary); display: block; margin-bottom: 0.4rem;">Scholarly Papers Highlighted:</strong>
+          <ul style="list-style: circle; padding-left: 1.2rem; font-size: 0.82rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.35rem;">
+            ${d.personalStatement.keyPublicationsMentioned.map(p => `<li>${p}</li>`).join("")}
+          </ul>
+        </div>
+
+        <div class="evolution-box">
+          <h4>🚀 Strategic Evolution for Next Cycle</h4>
+          <ul>
+            ${d.personalStatement.upgradeRecommendations.map(r => `<li>${r}</li>`).join("")}
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4. Faculty Endorsements Card -->
+      <div class="dossier-card">
+        <div class="dossier-card-head">
+          <span class="dossier-tag" style="background-color: #ede9fe; color: var(--uw-purple);">Letters of Recommendation</span>
+          <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted);">2024 Dossier</span>
+        </div>
+        <h3>Faculty Evaluator Quotes</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 0.75rem;">
+          Official letters submitted by City University of Seattle leadership:
+        </p>
+
+        ${d.facultyEndorsements.map(rec => `
+          <div class="recommender-card" style="margin-bottom: 0.85rem; padding: 0.9rem;">
+            <div class="recommender-header" style="margin-bottom: 0.25rem;">
+              <h4 style="font-size: 0.92rem;">${rec.recommender}</h4>
+            </div>
+            <p class="recommender-quote" style="font-size: 0.82rem; line-height: 1.45;">
+              "${rec.quote}"
+            </p>
+          </div>
+        `).join("")}
+
+        <div class="evolution-box">
+          <h4>🚀 Recommender Strategy for 2026/2027</h4>
+          <ul>
+            <li>Dr. Sam Chung's 14 years on faculty at UW is your strongest asset — keep him as LOR #1.</li>
+            <li>Ask Dr. Zantua to emphasize your recent UKC 2024 presentation and independent research initiative.</li>
+            <li>For LOR #3, secure an industry engineering manager (e.g. from eBay) or senior colleague to validate software engineering rigor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 // Render Clark Ngo Applicant Profile View
 function renderProfileView() {
   const container = document.getElementById("applicantProfileContainer");
@@ -559,6 +693,9 @@ function renderProfileView() {
         <div class="profile-info">
           <h3>${APPLICANT_PROFILE.name}</h3>
           <p><strong>${APPLICANT_PROFILE.title}</strong> &bull; ${APPLICANT_PROFILE.location}</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">
+            Cultural Background: <strong>${APPLICANT_PROFILE.heritage}</strong>
+          </p>
           <div class="profile-pill-links" style="margin-top: 0.75rem;">
             <a href="${APPLICANT_PROFILE.links.portfolio}" target="_blank" rel="noopener noreferrer" class="pill-link">
               🌐 Portfolio (clarkngo.github.io)
@@ -573,9 +710,10 @@ function renderProfileView() {
         </div>
       </div>
 
-      <div class="profile-sections-grid">
+      <!-- Core Credentials Grid -->
+      <div class="profile-sections-grid" style="margin-bottom: 2rem;">
         <div class="profile-box">
-          <h4>🎓 Academic Background</h4>
+          <h4>🎓 Academic Degrees</h4>
           <ul>
             ${APPLICANT_PROFILE.degrees.map(deg => `
               <li>
@@ -625,6 +763,50 @@ function renderProfileView() {
           </ul>
         </div>
       </div>
+
+      <!-- Peer-Reviewed Publications Section -->
+      <div class="section-header" style="margin-bottom: 1rem;">
+        <h3 style="font-size: 1.25rem;">📄 Published Research & Conference Proceedings</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Scholarly works authored by Clark Ngo demonstrating applied research, curriculum design, and cloud architectures:</p>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        ${APPLICANT_PROFILE.publications.map(pub => `
+          <div class="publication-card">
+            <div class="publication-top">
+              <span class="publication-venue">${pub.venue}</span>
+              <span class="publication-year">${pub.year}</span>
+            </div>
+            <div class="publication-title">
+              <a href="${pub.url}" target="_blank" rel="noopener noreferrer">${pub.title} ↗</a>
+            </div>
+            <div class="publication-authors">Authors: ${pub.authors} &bull; ${pub.type}</div>
+            <p class="publication-desc">${pub.description}</p>
+          </div>
+        `).join("")}
+      </div>
+
+      <!-- Faculty Recommenders Section -->
+      <div class="section-header" style="margin-bottom: 1rem;">
+        <h3 style="font-size: 1.25rem;">🤝 Primary Academic Recommenders</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Faculty mentors supporting your doctoral candidacy:</p>
+      </div>
+
+      <div class="viability-grid-2">
+        ${APPLICANT_PROFILE.recommenders.map(rec => `
+          <div class="recommender-card">
+            <div class="recommender-header">
+              <h4>${rec.name}</h4>
+              <div class="recommender-title">${rec.title} &bull; ${rec.institution}</div>
+              <div class="recommender-bg">Affiliation: ${rec.background}</div>
+            </div>
+            <p class="recommender-quote">
+              "${rec.keyEndorsement}"
+            </p>
+          </div>
+        `).join("")}
+      </div>
+
     </div>
   `;
 }

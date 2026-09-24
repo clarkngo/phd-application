@@ -1405,6 +1405,199 @@ img {
 }
 
 /* ==========================================================================
+   2024 Application Archive & Evolution Styles
+   ========================================================================== */
+.dossier-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 900px) {
+  .dossier-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.dossier-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+.dossier-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.dossier-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-full);
+  background-color: var(--uw-purple-subtle);
+  color: var(--uw-purple);
+}
+
+.dossier-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.dossier-quote-box {
+  background-color: var(--bg-tertiary);
+  border-left: 4px solid var(--uw-purple);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1rem 0;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.evolution-box {
+  background-color: rgba(13, 148, 136, 0.08);
+  border: 1px solid rgba(13, 148, 136, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  margin-top: auto;
+}
+
+.evolution-box h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.evolution-box ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.evolution-box li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.evolution-box li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+
+/* Publications List */
+.publication-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+  transition: transform var(--transition-fast);
+}
+
+.publication-card:hover {
+  transform: translateX(3px);
+}
+
+.publication-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.publication-venue {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-blue);
+}
+
+.publication-year {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+}
+
+.publication-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.publication-authors {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.publication-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+/* Recommender Cards */
+.recommender-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.recommender-header {
+  margin-bottom: 0.5rem;
+}
+
+.recommender-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.recommender-title {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.recommender-bg {
+  font-size: 0.85rem;
+  color: var(--accent-blue);
+  font-weight: 500;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.recommender-quote {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 0.75rem;
+}
+
+/* ==========================================================================
    Print Stylesheet
    ========================================================================== */
 @media print {
@@ -1426,7 +1619,7 @@ img {
     padding: 0 !important;
   }
 
-  .program-card, .viability-card, .tracker-program-block {
+  .program-card, .viability-card, .tracker-program-block, .dossier-card {
     break-inside: avoid;
     box-shadow: none !important;
     border: 1px solid #ccc !important;
