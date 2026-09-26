@@ -1625,3 +1625,148 @@ img {
     border: 1px solid #ccc !important;
   }
 }
+
+/* ==========================================================================
+   Verified Admissions Strategy Callout & Faculty Recruiting Details
+   ========================================================================== */
+.strategy-alert {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 5px solid var(--accent-amber);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.strategy-alert-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.strategy-alert-head h3 { margin: 0; }
+
+.strategy-verified {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.strategy-claim {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  min-width: 0;
+}
+
+.strategy-claim h4 {
+  margin: 0 0 0.4rem;
+  color: var(--text-primary);
+}
+
+.strategy-claim p { margin: 0.6rem 0; }
+
+.strategy-claim ul {
+  margin: 0.5rem 0;
+  padding-left: 1.1rem;
+}
+
+.strategy-claim li { margin-bottom: 0.35rem; }
+
+.strategy-timeline {
+  background-color: var(--bg-tertiary);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.3rem;
+  margin: 0.75rem 0;
+}
+
+.verdict-pill,
+.recruit-pill {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.verdict-partial { background-color: color-mix(in srgb, var(--accent-amber) 18%, transparent); color: var(--accent-amber); }
+.verdict-true,
+.recruit-yes { background-color: color-mix(in srgb, var(--accent-green) 18%, transparent); color: var(--accent-green); }
+.recruit-no { background-color: color-mix(in srgb, var(--su-red) 15%, transparent); color: var(--su-red); }
+.recruit-unknown { background-color: var(--bg-tertiary); color: var(--text-muted); }
+
+.recruit-pill { margin-left: 0.35rem; }
+
+.official-links {
+  font-size: 0.8rem;
+  margin: 0.75rem 0;
+}
+
+.official-links-label {
+  display: block;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.official-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.9rem;
+}
+
+.official-links a {
+  color: var(--accent-blue);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.official-links a:hover { text-decoration: underline; }
+
+.faculty-card .alignment-note { margin-top: 0; margin-bottom: 0.75rem; }
+
+.faculty-card.not-recruiting { opacity: 0.8; }
+
+.faculty-detail {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.faculty-detail strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.faculty-detail p { margin: 0 0 0.3rem; }
+
+.faculty-detail.contact-policy {
+  border-left: 3px solid var(--accent-amber);
+  padding-left: 0.6rem;
+}
+
+.faculty-source-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.faculty-card-links {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  gap: 0.5rem;
+}
+
+.faculty-card-links .btn { flex: 1; text-align: center; }

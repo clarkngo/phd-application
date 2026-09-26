@@ -5,7 +5,8 @@
  *   - Reference folder: reference-uw-2024-application
  *   - Recommenders: Dr. Sam Chung (Dean/Prof, former UW 14-yr faculty), Dr. Morgan Zantua (Assoc Prof, Dir. Center for Cybersecurity Innovation)
  *   - Research: Explainable AI (XAI) in Educational Systems, Human-in-the-loop Teacher Scaffolding
- *   - Target Faculty: Dr. Ben Lee, Dr. Mike Teodorescu, Dr. Jason Yip, Dr. Amy Ko, Dr. Julie Kientz
+ *   - Target Faculty (verified recruiting for Autumn 2027 on 2026-09-26): iSchool — Katie Davis, Amy Ko, Jason Yip, Ben Lee;
+ *     HCDE — Sayamindu Dasgupta, Julie Kientz, David McDonald
  */
 
 const APPLICANT_PROFILE = {
@@ -133,7 +134,7 @@ const APPLICANT_PROFILE = {
   strategicGaps: [
     "Expanding peer-reviewed publication venue reach into top-tier ACM venues (CHI, SIGCSE, CSCW)",
     "Tailoring the 2024 iSchool Statement of Purpose into an HCDE user-centered research framing for the dual application",
-    "Securing direct faculty alignment dialogue with target PIs ahead of December 2 deadline"
+    "Securing faculty alignment early (Sept–Oct) with PIs who welcome contact — and respecting the ones who explicitly say not to email (Amy Ko, Lucy Lu Wang)"
   ]
 };
 
@@ -152,65 +153,135 @@ const PROGRAMS_DATA = [
     badgeColor: "uw-purple",
     portalUrl: "https://grad.uw.edu/admissions/apply-now/",
     websiteUrl: "https://ischool.uw.edu/programs/phd",
+    officialLinks: [
+      { label: "Program home", url: "https://ischool.uw.edu/programs/phd" },
+      { label: "Application process", url: "https://ischool.uw.edu/programs/phd/admissions/application-process" },
+      { label: "Admissions FAQ", url: "https://ischool.uw.edu/programs/phd/admissions/faq" },
+      { label: "Faculty advisors (who is recruiting)", url: "https://ischool.uw.edu/programs/phd/people/faculty" },
+      { label: "UW Grad School application portal", url: "https://grad.uw.edu/admissions/apply-now/" }
+    ],
     tagline: "Interdisciplinary research at the intersection of information, people, and technology.",
     competitiveness: "High (< 8% acceptance rate)",
-    fundingModel: "100% Guaranteed 4-5 Years (Full Tuition Waiver + Living Stipend + Health Insurance as RA/TA)",
+    fundingModel: "Guaranteed funding for at least 4 years / 12 quarters (stipend + tuition waiver + health insurance via RA/TA appointments)",
     greRequired: false,
-    greNote: "GRE scores are not considered in the admissions review.",
+    greNote: "GRE scores are optional (no minimum); mainly useful to support a low-GPA petition.",
     
     viabilityScore: 92,
     viabilityCategory: "Direct Application Continuum (Highest Match)",
-    viabilitySummary: "Clark's 2024 application dossier was tailored precisely for the UW iSchool. His focus on Explainable AI (XAI) in Education, socio-technical systems, and diverse community leadership directly mirrors the iSchool's ethos. Endorsements from former UW professor Dr. Sam Chung and Director Zantua provide institutional credibility.",
+    viabilitySummary: "Clark's 2024 dossier was written for the iSchool, and the Autumn 2027 recruiting list now includes a near-direct topical match: Prof. Katie Davis lists 'AI & Education' and is studying how teachers negotiate generative AI in their practice — the same instructor-agency question at the heart of Clark's XAI-in-education proposal. Endorsements from former UW professor Dr. Sam Chung and Director Zantua add institutional credibility.",
     
     strengthsMatch: [
       "Existing tailored 2024 Statements of Purpose, Diversity, and Personal Statements already authored and grounded in XAI research literature (Longo 2024, Cardona 2023).",
-      "Rank 1 advisor match Dr. Ben Lee's research on Explainable AI (LIMEADE) and born-digital data matches Clark's XAI proposal perfectly.",
+      "Four recruiting faculty (Davis, Ko, Yip, B. Lee) each connect to a different part of Clark's profile: teacher-facing AI, CS education, youth co-design, and large-scale ML search engineering.",
       "Recommender Dr. Sam Chung served 14 years on faculty at UW Tacoma, offering an exceptional insider evaluation.",
       "Proven track record in university teaching and AWS veteran apprenticeships addresses the iSchool's priority for social good and tech equity."
     ],
     challengesToAddress: [
       "Prior application in 2024: Ensure the 2026/2027 update highlights new progress (UKC 2024 presentation, recent AI developments, refined research methodology).",
-      "Reach out directly to Dr. Ben Lee, Dr. Mike Teodorescu, and Dr. Jason Yip with a concise 1-page research pitch."
+      "Correction from earlier notes: Ben Lee's current lab is the Lab for Computing Cultural Heritage (ML search over library/archive collections). LIMEADE was his earlier CSE work — do not pitch him on XAI-in-education; pitch engineering help on his search systems instead.",
+      "Mike Teodorescu is NOT on the iSchool's 'currently seeking Ph.D. students (2027-28)' list — do not rank him as a primary advisor.",
+      "Contact rules differ per faculty: Amy Ko and Lucy Lu Wang ask applicants NOT to email — just name them in the application."
     ],
-    recommendedPositioning: "Focus on Explainable AI (XAI) for Human-AI Hybrid Educational Systems: Investigate how transparent, interpretable AI recommendations empower human educators rather than replacing them, directly tackling AI faculty shortages.",
+    recommendedPositioning: "Focus on human-centered AI for educators: how teachers interpret, trust, steer and override AI recommendations in their classrooms. Rank Katie Davis #1, then Amy Ko and Jason Yip; list Ben Lee if you want a skills-driven (ML systems engineering) option. The iSchool asks for 3–4 ranked faculty.",
 
     facultyMatches: [
       {
-        name: "Dr. Benjamin (Ben) Lee",
-        title: "Assistant Professor",
-        lab: "Human-Centered Machine Learning & Digital Humanities",
-        researchAreas: ["Explainable AI (XAI)", "Machine Learning", "Cultural Heritage & Born-Digital Data", "LIMEADE"],
-        url: "https://ischool.uw.edu/people/faculty/profile/bcgl",
-        alignment: "Clark's Rank 1 Advisor. Dr. Lee's work on LIMEADE and explainable AI algorithms directly parallels Clark's desire to build transparent, interpretable decision systems."
+        name: "Prof. Katie Davis",
+        title: "Professor, Associate Dean of Faculty Affairs",
+        lab: "Digital Youth Lab · Co-Director, UW Center for Digital Youth",
+        researchAreas: ["AI & Education", "Teachers & Generative AI", "Teens' Interactions with AI Chatbots", "Learning Sciences"],
+        url: "https://ischool.uw.edu/people/faculty/profile/kdavis78",
+        labUrl: "http://www.katiedavisresearch.com/",
+        recruiting: "yes",
+        recruitingNote: "Recruiting PhD students in youth, well-being, HCI and the learning sciences for the 2027 cycle.",
+        contactPolicy: "Email OK (kdavis78@uw.edu). The iSchool FAQ says cold emails are welcomed. Keep it short and specific to her teacher/GenAI project.",
+        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark is a working graduate instructor who has shipped RAG/AI coursework (UKC 2024), so he can recruit and interview instructors, and build instrumented GenAI classroom tools and teacher dashboards for her studies.",
+        alignment: "Rank #1. Closest topical match to Clark's 2024 XAI-in-education proposal (instructor agency over AI recommendations)."
       },
       {
-        name: "Dr. Mike H.M. Teodorescu",
-        title: "Assistant Professor",
-        lab: "Information, Technology & Organization (ITO)",
-        researchAreas: ["Machine Learning Fairness", "Technology Innovation", "Ethical AI Adoption", "Intellectual Property"],
-        url: "https://ischool.uw.edu/people/faculty/profile/miket",
-        alignment: "Clark's Rank 2 Advisor. Dr. Teodorescu's emphasis on algorithmic fairness, bias mitigation, and ethical adoption aligns with Clark's commitment to equitable educational tools."
-      },
-      {
-        name: "Dr. Jason Yip",
-        title: "Associate Professor",
-        lab: "KidsTeam UW / Digital Youth Lab",
-        researchAreas: ["Participatory Design", "Child-Computer Interaction", "Self-Regulated Learning", "Family Technologies"],
-        url: "https://ischool.uw.edu/people/faculty/profile/jcyip",
-        alignment: "Clark's Rank 3 Advisor. Direct synergy with Clark's CodeDay mentorship, teen coaching, and participatory design of educational software."
-      },
-      {
-        name: "Dr. Amy J. Ko",
-        title: "Professor & Associate Dean",
+        name: "Prof. Amy J. Ko",
+        title: "Professor, Associate Dean for Academics",
         lab: "Code & Cognition Lab",
-        researchAreas: ["Computing Education", "Human-Computer Interaction", "Developer Cognition"],
-        url: "https://faculty.washington.edu/ajko/",
-        alignment: "Pioneering researcher in how humans learn computer science and how software engineering tools scaffold problem-solving."
+        researchAreas: ["Critical & Liberatory CS/AI Education", "Programmable Media for Learners (Wordplay)", "Culturally Responsive CS Teaching"],
+        url: "https://ischool.uw.edu/people/faculty/profile/ajko",
+        labUrl: "https://faculty.washington.edu/ajko/lab",
+        recruiting: "yes",
+        recruitingNote: "Recruiting one iSchool or CSE PhD student for Autumn 2027: accessible, multilingual programmable media (Wordplay) and culturally responsive computing teaching.",
+        contactPolicy: "DO NOT email a CV or research proposal, and do not ask for a meeting — she says to just apply and she will read it. Only write with a specific question about her recent research.",
+        howClarkCanHelp: "Wordplay is an open-source, multilingual, accessible programming language. Clark's full-stack skills plus Tagalog and Mandarin fluency make a useful open-source contribution possible (e.g., localization or accessibility fixes). Cite that work in the SoP instead of emailing her.",
+        alignment: "Rank #2. Clark's CONISAR paper on lowering barriers to full-stack development, and his teaching of non-traditional learners, match her CS-education equity agenda."
+      },
+      {
+        name: "Prof. Jason C. Yip",
+        title: "Associate Professor, MCHI+D Director",
+        lab: "KidsTeam UW",
+        researchAreas: ["Co-Design with Children", "Generative AI & Children's Creativity", "AI Literacy", "Family Technologies"],
+        url: "https://ischool.uw.edu/people/faculty/profile/jcyip",
+        labUrl: "https://kidsteam.ischool.uw.edu/",
+        recruiting: "yes",
+        recruitingNote: "Listed on the iSchool's 'currently seeking Ph.D. students (2027-28)' list.",
+        contactPolicy: "Email OK (jcyip@uw.edu). No stated restriction; the iSchool encourages outreach.",
+        howClarkCanHelp: "Clark has CodeDay mentoring experience (ages 12–26) for co-design facilitation, and can build the working GenAI and AI-literacy prototypes that KidsTeam sessions need.",
+        alignment: "Rank #3. Good fit if Clark frames his work around learners (AI literacy, novice programmers) rather than instructors."
+      },
+      {
+        name: "Prof. Ben Lee",
+        title: "Assistant Professor",
+        lab: "Lab for Computing Cultural Heritage",
+        researchAreas: ["Machine Learning for Search", "Digital Libraries & Archives", "Digital Humanities", "Ethics of ML"],
+        url: "https://ischool.uw.edu/people/faculty/profile/bcgl",
+        labUrl: "https://l4cch.github.io/lab-website/",
+        recruiting: "yes",
+        recruitingNote: "Profile says he is recruiting Ph.D. students for Autumn 2027.",
+        contactPolicy: "Email OK (bcgl@uw.edu). His lab site asks for your research interests and why you want the iSchool and his lab specifically.",
+        howClarkCanHelp: "His projects are large-scale ML search systems (GovScape: multimodal search over 70M government PDFs; Newspaper Navigator). Clark's cloud, serverless and RAG engineering fits building and scaling these systems. The topic is cultural heritage, not education.",
+        alignment: "Rank #4 (skills match). This is a strong engineering fit but a weak topical fit. Only pitch him if Clark is open to research on search and ML over archives."
+      },
+      {
+        name: "Prof. Alexis Hiniker",
+        title: "Associate Professor, Ph.D. Program Chair",
+        lab: "User Empowerment Lab",
+        researchAreas: ["Human-AI Interaction", "Child & Teen Wellbeing", "Dark Patterns", "Conversational AI Privacy"],
+        url: "https://ischool.uw.edu/people/faculty/profile/alexisr",
+        labUrl: "",
+        recruiting: "yes",
+        recruitingNote: "Listed on the iSchool's 'currently seeking Ph.D. students (2027-28)' list.",
+        contactPolicy: "No stated policy found. Email (alexisr@uw.edu) is acceptable under iSchool guidance.",
+        howClarkCanHelp: "Clark could help build and deploy the human-AI interaction study apps her lab uses (e.g., conversational AI prototypes with logging).",
+        alignment: "Alternate. Her human-AI interaction focus overlaps with Clark's, but her lab centers wellbeing, not education."
+      },
+      {
+        name: "Prof. Lucy Lu Wang",
+        title: "Assistant Professor",
+        lab: "NLP · AI Reliability · Agentic AI",
+        researchAreas: ["Natural Language Processing", "AI Reliability & Evaluation", "Agentic AI", "Accessible Scholarly Documents"],
+        url: "https://ischool.uw.edu/people/faculty/profile/lucylw",
+        labUrl: "https://llwang.net/",
+        recruiting: "yes",
+        recruitingNote: "Recruiting for 2027-28 in NLP, AI reliability, AI for clinical applications, and AI evaluation.",
+        contactPolicy: "DO NOT email — she is not replying to individual applicant emails. Tag her in your application instead.",
+        howClarkCanHelp: "Clark's RAG and agentic-workflow engineering fits her AI reliability and evaluation work. Evaluating AI tutors could bridge that work to his education interest.",
+        alignment: "Alternate (skills match). Consider only if Clark pivots toward AI evaluation."
+      },
+      {
+        name: "Prof. Mike Teodorescu",
+        title: "Assistant Professor",
+        lab: "Entrepreneurship, Technology Management & IP",
+        researchAreas: ["Entrepreneurship", "Technology Management", "Intellectual Property", "ML Fairness"],
+        url: "https://ischool.uw.edu/people/faculty/profile/miketeod",
+        labUrl: "",
+        recruiting: "no",
+        recruitingNote: "Not on the iSchool's 'currently seeking Ph.D. students (2027-28)' list (checked 2026-09-26).",
+        contactPolicy: "Do not make him a primary pick. At most, send a brief question about his plans.",
+        howClarkCanHelp: "Clark's MBA and finance background fits his technology-management research.",
+        alignment: "Removed from top 3 because he is not listed as recruiting."
       }
     ],
 
     requirementsList: [
-      { id: "sop", label: "Statement of Purpose (Refine 2024 XAI in Education proposal with 2025/2026 literature)", completed: false },
+      { id: "advisor_match_pitch", label: "🎯 Sept–Oct: Email a short, project-specific note to Katie Davis, Jason Yip and Ben Lee (all welcome contact)", completed: false },
+      { id: "wordplay_contribution", label: "🛠 Do NOT email Amy Ko or Lucy Lu Wang. Instead, make a concrete Wordplay open-source contribution and cite it in the SoP", completed: false },
+      { id: "sop", label: "Statement of Purpose (Refine 2024 XAI in Education proposal toward teachers + GenAI; name 3–4 recruiting faculty)", completed: false },
       { id: "personal", label: "Personal Statement (350 words: Journey from finance to software engineering & teaching)", completed: false },
       { id: "diversity", label: "Diversity Statement (Filipino-Chinese identity, AWS veteran cohorts, CodeDay mentoring)", completed: false },
       { id: "cv", label: "Academic CV (Include 3 papers: CONISAR, CISSE, UKC 2024, plus CityU/eBay experience)", completed: false },
@@ -218,7 +289,7 @@ const PROGRAMS_DATA = [
       { id: "lor_chung", label: "LOR #1: Dr. Sam Chung (Dean & Prof, former 14-yr UW tenured faculty)", completed: false },
       { id: "lor_zantua", label: "LOR #2: Dr. Morgan Zantua (Assoc Prof & Center Director)", completed: false },
       { id: "lor_third", label: "LOR #3: Industry/Academic Recommender (eBay Director or CityU Colleague)", completed: false },
-      { id: "faculty_outreach", label: "Email Dr. Ben Lee, Dr. Mike Teodorescu & Dr. Jason Yip with updated pitch", completed: false }
+      { id: "early_submission", label: "⚡ Submit by ~Nov 15, 2026 (buffer for letters/transcripts; the official deadline is Dec 2)", completed: false }
     ]
   },
 
@@ -236,62 +307,102 @@ const PROGRAMS_DATA = [
     badgeColor: "uw-gold",
     portalUrl: "https://grad.uw.edu/admissions/apply-now/",
     websiteUrl: "https://www.hcde.washington.edu/phd",
+    officialLinks: [
+      { label: "Program home", url: "https://www.hcde.washington.edu/phd" },
+      { label: "Admissions", url: "https://www.hcde.washington.edu/phd/admissions" },
+      { label: "Application requirements", url: "https://www.hcde.washington.edu/phd/application" },
+      { label: "Faculty PhD recruitment (2027)", url: "https://www.hcde.washington.edu/phd/application/faculty-recruitment" },
+      { label: "UW Grad School application portal", url: "https://grad.uw.edu/admissions/apply-now/" }
+    ],
     tagline: "Engineering human-centered technologies, user experience research, and collaborative systems.",
     competitiveness: "Very High (< 10% acceptance rate)",
-    fundingModel: "100% Guaranteed 4-5 Years (Tuition Waiver + RA/TA Stipend + Health Insurance)",
+    fundingModel: "Funded via RA/TA appointments (tuition waiver + stipend + health insurance). Confirm current terms on HCDE's 'Costs & financing' page.",
     greRequired: false,
-    greNote: "GRE scores are not required and not considered.",
+    greNote: "GRE scores are not required (still accepted if submitted).",
 
     viabilityScore: 86,
     viabilityCategory: "Strong Fit (Engineering & Design Hybrid)",
-    viabilitySummary: "HCDE is in the College of Engineering. Clark's background in software engineering, cloud systems, and his 2024 research proposal on collaborative instructor dashboards is well-suited for HCDE if translated into user-centered research methods (contextual inquiry, participatory design with teachers, interaction design for XAI).",
+    viabilitySummary: "HCDE is in the College of Engineering. Clark's software engineering background and his 2024 proposal for collaborative instructor dashboards fit HCDE if reframed through user-centered methods (contextual inquiry, participatory design with teachers, interaction design for XAI). HCDE publishes exactly which faculty are recruiting, and naming none of them results in denial.",
 
     strengthsMatch: [
       "Clark's proposed 'Hybrid Platform for Human Educators & AI Collaboration' from his 2024 SoP is inherently an HCDE topic (human-in-the-loop interaction design).",
       "Strong engineering chops (MSCS, AWS, serverless paper) give him the technical capability to build working interactive prototypes.",
-      "Work with diverse populations (CodeDay, military veterans) directly supports HCDE's commitment to equity and user diversity."
+      "Sayamindu Dasgupta (recruiting 1–2, open to meetings) studies how young people learn with and about data — a direct fit for Clark's education + tools focus and his multilingual background."
     ],
     challengesToAddress: [
-      "Must re-orient the SoP from purely algorithmic XAI to interaction design, teacher user studies, cognitive load, and human-AI collaborative workflows.",
-      "Must select 3 HCDE-specific faculty advisors (e.g., Dr. Julie Kientz, Dr. Jennifer Turns, Dr. Sean Munson)."
+      "HARD RULE (HCDE application page): applicants who don't name at least one RECRUITING faculty member are DENIED.",
+      "Correction from earlier notes: Jennifer Turns is NOT recruiting for 2027. Sean Munson is recruiting, but for digital mental health and personal health informatics, which is a weak fit.",
+      "Julie Kientz is recruiting one student (children and families) but is NOT available for meetings. Name her in the rankings rather than asking for a call.",
+      "Must re-orient the SoP from purely algorithmic XAI to interaction design, teacher user studies, cognitive load, and human-AI collaborative workflows."
     ],
-    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: Design and evaluate collaborative interfaces that allow educators to steer and audit AI recommendations while preserving pedagogical agency.",
+    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank Dasgupta, Kientz and McDonald (all recruiting); HCDE asks for 2–4 ranked faculty.",
 
     facultyMatches: [
       {
-        name: "Dr. Julie Kientz",
-        title: "Professor & Former Department Chair",
-        lab: "Computing for Healthy Living & Learning",
-        researchAreas: ["Human-Computer Interaction", "Health & Educational Tech", "User-Centered Design"],
-        url: "https://www.hcde.washington.edu/kientz",
-        alignment: "Leader in designing technologies for children, families, and learners with focus on empirical evaluation."
+        name: "Prof. Sayamindu Dasgupta",
+        title: "HCDE Faculty (joined 2022; PhD, MIT Lifelong Kindergarten)",
+        lab: "Research group site: unmad.in",
+        researchAreas: ["Data Literacy", "Constructionism", "Digital Media & Learning", "Multilingual Learner Tools"],
+        url: "https://www.hcde.washington.edu/dasgupta",
+        labUrl: "https://unmad.in/",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page: recruiting 1–2 students (how young people learn with digital technologies). Open to meetings.",
+        contactPolicy: "Meetings OK per HCDE's recruitment page. Email sdg1@uw.edu with a short, specific note.",
+        howClarkCanHelp: "He builds systems that let kids create their own data-analysis tools and question data-driven systems, and has studied learners using tools in their home languages. Clark can build those tools full-stack and bring Tagalog and Mandarin localization experience.",
+        alignment: "HCDE Rank #1. Best overlap of topic (learning with and about data and AI), skills, and availability."
       },
       {
-        name: "Dr. Jennifer Turns",
+        name: "Prof. Julie Kientz",
         title: "Professor",
-        lab: "Engineering Education & Reflection Lab",
-        researchAreas: ["Engineering Pedagogy", "Reflection in Design", "Educator Cognitive Tools"],
-        url: "https://www.hcde.washington.edu/turns",
-        alignment: "Exceptional synergy with Clark's goal of empowering educators and improving engineering education systems."
+        lab: "Computing for Healthy Living & Learning",
+        researchAreas: ["HCI", "Technologies for Children & Families", "Educational & Health Tech", "User-Centered Design"],
+        url: "https://www.hcde.washington.edu/kientz",
+        labUrl: "",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page: recruiting 1 student (computing technologies with children and families).",
+        contactPolicy: "NOT available for meetings. Don't ask for a call. Name her in the application's faculty rankings.",
+        howClarkCanHelp: "Clark can rapidly build high-fidelity prototypes for her field deployments with families and learners.",
+        alignment: "HCDE Rank #2. Recruiting and topically relevant (learning technologies), though family-focused."
       },
       {
-        name: "Dr. Sean A. Munson",
-        title: "Professor & Department Chair",
-        lab: "Collaboration & Health Informatics Lab",
-        researchAreas: ["Human-Centered Data", "CSCW", "Interactive Systems Design"],
-        url: "https://www.hcde.washington.edu/munson",
-        alignment: "Strong alignment for full-stack data dashboards that support human decision making."
+        name: "Prof. David W. McDonald",
+        title: "Professor",
+        lab: "Directed Research Groups (CSCW / Social Computing)",
+        researchAreas: ["Social Computing", "Human-Centered AI", "CSCW", "Recommender & Matching Systems"],
+        url: "https://www.hcde.washington.edu/mcdonald",
+        labUrl: "https://www.hcde.washington.edu/research/mcdonald",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page: recruiting (open) in social computing and human-centered AI. Open to meetings.",
+        contactPolicy: "Meetings OK. Email dwmc@uw.edu.",
+        howClarkCanHelp: "His interest is systems that interleave computation with human activity. Clark's human-in-the-loop educator/AI dashboard idea and his full-stack skills fit here.",
+        alignment: "HCDE Rank #3. A safe recruiting pick on the human-centered AI side."
+      },
+      {
+        name: "Prof. Gary Hsieh",
+        title: "Professor",
+        lab: "HCDE",
+        researchAreas: ["Generative AI", "Conversational Agents", "Health"],
+        url: "https://www.hcde.washington.edu/hsieh",
+        labUrl: "",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page: recruiting 1 student (GenAI or conversational agents for health). Open to meetings.",
+        contactPolicy: "Meetings OK.",
+        howClarkCanHelp: "Clark has hands-on experience building RAG and LLM applications, which fits the conversational-agent work. The application area is health, not education.",
+        alignment: "Alternate (skills match, domain mismatch)."
       }
     ],
 
     requirementsList: [
-      { id: "sop", label: "Statement of Purpose (Reframe 2024 XAI proposal toward Human-Centered Interaction Design)", completed: false },
+      { id: "recruitment_check", label: "✅ Verified 2026-09-26: Dasgupta, Kientz, McDonald are recruiting; Turns is NOT. Re-check the recruitment page before submitting", completed: false },
+      { id: "faculty_meetings", label: "🎯 Sept–Oct: Request short meetings with Dasgupta and McDonald (both open to meetings). Do not ask Kientz for a meeting", completed: false },
+      { id: "sop", label: "Statement of Purpose (Reframe 2024 XAI proposal toward Human-Centered Interaction Design & advisor synergy)", completed: false },
       { id: "edi", label: "Equity, Diversity & Inclusion Statement (Leverage 2024 diversity narrative: AWS veterans & CodeDay)", completed: false },
       { id: "cv", label: "Curriculum Vitae (Highlight software architecture and research publications)", completed: false },
-      { id: "transcripts", label: "Transcripts (CityU MSCS, MBA, DLSU BS)", completed: false },
+      { id: "transcripts", label: "Unofficial transcripts (CityU MSCS, MBA, DLSU BS)", completed: false },
       { id: "letters", label: "3 Letters of Recommendation (Dr. Sam Chung, Dr. Morgan Zantua, Industry Lead)", completed: false },
-      { id: "faculty_selection", label: "Identify and rank 3 Prospective HCDE Faculty Advisors in portal", completed: false },
-      { id: "portfolio_link", label: "Include links to clarkngo.github.io learning platforms and capstone", completed: false }
+      { id: "faculty_selection", label: "Rank 2–4 faculty in the portal. At least one MUST be recruiting, or the application is denied", completed: false },
+      { id: "portfolio_link", label: "Include links to clarkngo.github.io learning platforms and capstone", completed: false },
+      { id: "early_submission", label: "⚡ Submit by ~Nov 15, 2026 (buffer for letters; the official deadline is Dec 2)", completed: false }
     ]
   },
 
@@ -307,8 +418,12 @@ const PROGRAMS_DATA = [
     deadline: "Cohort based (Admissions currently under revision)",
     deadlineFormatted: "Program Under Revision (Contact Admissions for Upcoming Cohorts)",
     badgeColor: "seattleu-red",
-    portalUrl: "https://www.seattleu.edu/education/graduate-admissions/",
-    websiteUrl: "https://www.seattleu.edu/education/educational-leadership-doctorate/",
+    portalUrl: "https://www.seattleu.edu/admissions-aid/executive-professional-admissions/",
+    websiteUrl: "https://www.seattleu.edu/academics/all-programs/educational-organizational-learning-leadership/",
+    officialLinks: [
+      { label: "EOLL Ed.D. program page", url: "https://www.seattleu.edu/academics/all-programs/educational-organizational-learning-leadership/" },
+      { label: "Executive & Professional Admissions", url: "https://www.seattleu.edu/admissions-aid/executive-professional-admissions/" }
+    ],
     tagline: "Practitioner-scholar leadership model for transformative educational change and organizational equity.",
     competitiveness: "Moderate / Selective (Cohort-based)",
     fundingModel: "Tuition-Paying / Self-Funded (Tuition scholarships, employer assistance, or loans; typically no full PhD research stipend)",
@@ -326,7 +441,7 @@ const PROGRAMS_DATA = [
     challengesToAddress: [
       "Degree Distinction: Awards an Ed.D., not a Ph.D. Clark specifically stated needing a PhD.",
       "Funding: Ed.D. programs are usually tuition-paying without the guaranteed 4-5 year living stipends of UW Ph.D. programs.",
-      "Admissions Status: Seattle U has been actively revising and reimagining the EOLL program, with admissions paused/selective.",
+      "Admissions Status (verified 2026-09-26): the program page says Seattle U is \"revising and reimagining\" EOLL and asks prospective students to check back. No 2027 cohort deadline is published.",
       "Research Focus: Focuses on school administration and organizational policy rather than software engineering, AI, or HCI."
     ],
     recommendedPositioning: "Only pursue if your primary career goal is higher-education administration, community college deanship, or organizational leadership. For technical research, academic faculty in computing, or AI R&D, UW iSchool or HCDE Ph.D. is the appropriate path.",
@@ -360,23 +475,29 @@ const PROGRAMS_DATA = [
     degree: "Ph.D. in Education (Learning Sciences & Human Development)",
     degreeType: "PhD",
     location: "Seattle, WA (Miller Hall, UW Campus)",
-    deadline: "2026-12-01T23:59:59-08:00",
-    deadlineFormatted: "December 1, 2026",
+    deadline: "2026-12-04T23:59:59-08:00",
+    deadlineFormatted: "December 4, 2026 (Ph.D. — decisions by Feb 12, 2027)",
     badgeColor: "uw-purple-light",
     portalUrl: "https://grad.uw.edu/admissions/apply-now/",
-    websiteUrl: "https://education.uw.edu/programs/doctoral/phd",
+    websiteUrl: "https://education.uw.edu/programs/graduate/educational-psychology/learning-sciences-human-development",
+    officialLinks: [
+      { label: "LSHD program page", url: "https://education.uw.edu/programs/graduate/educational-psychology/learning-sciences-human-development" },
+      { label: "Application deadlines", url: "https://education.uw.edu/admissions/deadlines" },
+      { label: "Graduate admission requirements", url: "https://education.uw.edu/admissions/graduate/requirements" },
+      { label: "UW Grad School application portal", url: "https://grad.uw.edu/admissions/apply-now/" }
+    ],
     tagline: "Theory, research, and design of learning environments, cognitive tools, and socio-cultural development.",
     competitiveness: "High",
-    fundingModel: "Fully Funded (4-year packages typically available for full-time PhDs)",
+    fundingModel: "Not guaranteed on the program page. Ask edinfo@uw.edu about RA/TA packages before applying",
     greRequired: false,
     greNote: "GRE scores not required.",
 
     viabilityScore: 80,
     viabilityCategory: "Promising Interdisciplinary Option",
-    viabilitySummary: "If Clark is passionate about education and requires a fully funded Ph.D. (rather than an Ed.D.), the UW College of Education's Learning Sciences & Human Development (LSHD) area is a compelling alternative. It investigates how people learn with cognitive tools, AI, and digital environments.",
+    viabilitySummary: "If Clark wants a research Ph.D. in education (rather than an Ed.D.), the UW College of Education's Learning Sciences & Human Development (LSHD) area is a compelling alternative. It investigates how people learn with cognitive tools, AI, and digital environments. Funding is not guaranteed on the program page, so confirm it before investing effort.",
 
     strengthsMatch: [
-      "Awards an authentic research Ph.D. with graduate funding opportunities.",
+      "Awards an authentic research Ph.D.; its 'Learning, Technologies, Creativity, and Design' strand fits Clark's tools-for-learning interest.",
       "Examines how cognitive technologies facilitate STEM and computing learning.",
       "Allows cross-campus collaboration with UW iSchool and Paul G. Allen School of CSE."
     ],
@@ -393,7 +514,23 @@ const PROGRAMS_DATA = [
         lab: "Learning in Informal and Formal Environments (LIFE)",
         researchAreas: ["STEM Learning", "Educational Technologies", "Learning Sciences"],
         url: "https://education.uw.edu/people/faculty/pbell",
-        alignment: "Strong match for investigating how computing and science tools foster learning."
+        alignment: "Strong match for investigating how computing and science tools foster learning.",
+        recruiting: "unknown",
+        recruitingNote: "The College of Education does not publish a recruiting list. Ask directly.",
+        contactPolicy: "No stated policy. Ask directly whether he is taking students for Autumn 2027.",
+        howClarkCanHelp: "Clark can build the learning technologies used in design-based STEM research."
+      },
+      {
+        name: "Prof. Katie Headrick Taylor",
+        title: "Associate Professor",
+        lab: "Mobile City Science · Unite:Ed",
+        researchAreas: ["Digital Literacies", "Equity in Learning", "Mobile & Geospatial STEM Learning", "Design-Based Research"],
+        url: "https://education.uw.edu/about/directory/katie-headrick-taylor",
+        alignment: "Studies digitally mediated learning with a strong equity lens, which connects to Clark's mentoring of non-traditional learners.",
+        recruiting: "unknown",
+        recruitingNote: "Recruiting status not published.",
+        contactPolicy: "No stated policy. Ask directly (kht126@uw.edu).",
+        howClarkCanHelp: "Clark can build the mobile and web apps for community-based learning studies."
       }
     ],
 
@@ -495,4 +632,43 @@ const APPLICATION_2024_DOSSIER = {
       quote: "Clark has demonstrated an exceptional capacity to combine academic achievements and research interests... During the AWS Full Stack project, Clark mastered content by teaching his peers. His recent contribution at UKC 2024 demonstrates his ability to maintain academic relevance."
     }
   ]
+};
+
+// Strategic Admissions Verification & Guidance
+// Every claim below was checked against official UW / Seattle U pages on 2026-09-26.
+const ADMISSIONS_STRATEGY_VERIFICATION = {
+  verifiedOn: "2026-09-26",
+  deadlineTruth: {
+    title: "Is the deadline really \"first come, first served\"?",
+    verdict: "Partly true",
+    officialPolicy: "No. UW iSchool (Dec 2), HCDE (Dec 2) and UW Education LSHD (Dec 4) each have a single deadline and review applications afterward. The iSchool runs interviews in January and sends decisions in early February. Applications are not reviewed or admitted on a rolling, first-come basis.",
+    functionalReality: "In practice, the scarce resource is advisor slots, and those do go early. HCDE publishes slot counts per professor (e.g., \"1\" or \"1–2\" students), and the iSchool FAQ says many successful applicants were admitted after talking directly with faculty. A professor with one slot who has already had good conversations with a candidate in October is effectively taken. Early contact matters far more than an early submit button.",
+    keyRisksOfWaiting: [
+      "Advisor slots are small and published: Kientz (1), Dasgupta (1–2), Hsieh (1). Once a professor has a candidate in mind, the slot is effectively gone.",
+      "Letters and transcripts need buffer time. Submitting around Nov 15 leaves time to chase late recommenders (this is our advice, not official policy).",
+      "Not every professor wants early contact. Amy Ko and Lucy Lu Wang explicitly ask applicants NOT to email, and Kientz is not taking meetings. Emailing them does not help and can hurt."
+    ],
+    recommendedTimeline: {
+      earlyOutreach: "Now – Oct 31: Contact only the faculty who welcome it (Davis, Yip, B. Lee, Dasgupta, McDonald). For those who don't, make a visible contribution instead (e.g., to Wordplay for Ko).",
+      earlySubmissionTarget: "By ~Nov 15: Submit with buffer for letters and transcripts.",
+      hardDeadline: "Dec 2, 2026 (iSchool & HCDE) · Dec 4, 2026 (UW Education LSHD Ph.D.)"
+    },
+    sources: [
+      { label: "iSchool PhD application process", url: "https://ischool.uw.edu/programs/phd/admissions/application-process" },
+      { label: "iSchool PhD FAQ", url: "https://ischool.uw.edu/programs/phd/admissions/faq" },
+      { label: "HCDE faculty recruitment", url: "https://www.hcde.washington.edu/phd/application/faculty-recruitment" },
+      { label: "UW Education deadlines", url: "https://education.uw.edu/admissions/deadlines" }
+    ]
+  },
+  advisorMatchingTruth: {
+    title: "Do you need to match an advisor's research?",
+    verdict: "Verified: this is the deciding factor",
+    officialRequirement: "The iSchool FAQ calls finding a faculty mentor the main admissions consideration and asks applicants to rank 3–4 faculty. HCDE's application page is stricter: applicants who don't name any recruiting faculty have their application DENIED.",
+    whyItMatters: "PhD admission is effectively a match with one funded advisor, not a generic cohort seat. A strong CV aimed at a professor who isn't recruiting, or whose topic doesn't overlap, gets nowhere. The pitch should say which of their current projects you can help with and why your skills make you useful from month one.",
+    sources: [
+      { label: "iSchool faculty currently seeking PhD students", url: "https://ischool.uw.edu/programs/phd/people/faculty" },
+      { label: "HCDE application requirements", url: "https://www.hcde.washington.edu/phd/application" },
+      { label: "Amy Ko — lab / prospective students", url: "https://faculty.washington.edu/ajko/lab" }
+    ]
+  }
 };

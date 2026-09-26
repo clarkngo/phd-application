@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initNavigation();
   initCountdown();
+  renderStrategyAlert();
   renderDashboard();
   renderViabilityView();
   renderTrackerView();
@@ -215,13 +216,15 @@ function renderDashboard() {
           </div>
           <div class="spec-item">
             <span class="spec-icon">🎯</span>
-            <div><strong>GRE:</strong> ${prog.greRequired ? "Required" : "Not Required / Not Considered"}</div>
+            <div><strong>GRE:</strong> ${prog.greNote}</div>
           </div>
           <div class="spec-item">
             <span class="spec-icon">📊</span>
             <div><strong>Tasks Done:</strong> ${completedReqs}/${totalReqs} (${percent}%)</div>
           </div>
         </div>
+
+        ${renderLinkList(prog.officialLinks, "Official pages")}
 
         <div class="program-card-footer">
           <button class="btn btn-primary btn-sm switch-tab-btn" data-tab="tab-tracker" data-scroll="${prog.id}">
@@ -239,6 +242,60 @@ function renderDashboard() {
   }).join("");
 
   attachSwitchTabEvents();
+}
+
+function renderLinkList(links, heading) {
+  if (!links || !links.length) return "";
+  return `
+    <div class="official-links">
+      <span class="official-links-label">${heading}</span>
+      <ul>
+        ${links.map(l => `<li><a href="${l.url}" target="_blank" rel="noopener noreferrer">${l.label} ↗</a></li>`).join("")}
+      </ul>
+    </div>
+  `;
+}
+
+// Render verified admissions-strategy callout (deadline reality + advisor matching)
+function renderStrategyAlert() {
+  const container = document.getElementById("strategicAdmissionsAlert");
+  if (!container || typeof ADMISSIONS_STRATEGY_VERIFICATION === "undefined") return;
+
+  const v = ADMISSIONS_STRATEGY_VERIFICATION;
+  const d = v.deadlineTruth;
+  const a = v.advisorMatchingTruth;
+
+  container.innerHTML = `
+    <div class="strategy-alert">
+      <div class="strategy-alert-head">
+        <h3>Admissions reality check</h3>
+        <span class="strategy-verified">Checked against official pages · ${v.verifiedOn}</span>
+      </div>
+      <div class="viability-grid-2">
+        <div class="strategy-claim">
+          <h4>${d.title}</h4>
+          <span class="verdict-pill verdict-partial">${d.verdict}</span>
+          <p><strong>Official:</strong> ${d.officialPolicy}</p>
+          <p><strong>In practice:</strong> ${d.functionalReality}</p>
+          <ul>${d.keyRisksOfWaiting.map(r => `<li>${r}</li>`).join("")}</ul>
+          <div class="strategy-timeline">
+            <div><strong>Outreach:</strong> ${d.recommendedTimeline.earlyOutreach}</div>
+            <div><strong>Submit:</strong> ${d.recommendedTimeline.earlySubmissionTarget}</div>
+            <div><strong>Hard deadline:</strong> ${d.recommendedTimeline.hardDeadline}</div>
+          </div>
+          ${renderLinkList(d.sources, "Sources")}
+        </div>
+        <div class="strategy-claim">
+          <h4>${a.title}</h4>
+          <span class="verdict-pill verdict-true">${a.verdict}</span>
+          <p><strong>Official:</strong> ${a.officialRequirement}</p>
+          <p>${a.whyItMatters}</p>
+          <button class="btn btn-primary btn-sm switch-tab-btn" data-tab="tab-faculty">See verified advisor matches →</button>
+          ${renderLinkList(a.sources, "Sources")}
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function attachSwitchTabEvents() {
@@ -521,10 +578,17 @@ function renderFacultyView() {
     });
   });
 
+  const recruitingLabels = {
+    yes: "Recruiting for Autumn 2027",
+    no: "Not listed as recruiting",
+    unknown: "Recruiting status unknown"
+  };
+
   container.innerHTML = allFaculty.map(f => `
-    <div class="faculty-card">
+    <div class="faculty-card ${f.recruiting === "no" ? "not-recruiting" : ""}">
       <div class="faculty-card-header">
         <span class="faculty-school-tag university-pill ${f.badgeColor}">${f.programName}</span>
+        ${f.recruiting ? `<span class="recruit-pill recruit-${f.recruiting}">${recruitingLabels[f.recruiting]}</span>` : ""}
         <h4>${f.name}</h4>
         <div class="faculty-title">${f.title} &bull; ${f.university}</div>
         <div class="faculty-lab">${f.lab}</div>
@@ -539,10 +603,22 @@ function renderFacultyView() {
         ${f.alignment}
       </div>
 
-      <div style="margin-top: auto; padding-top: 0.75rem; border-top: 1px solid var(--border-light);">
-        <a href="${f.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="width: 100%;">
-          View Lab & Publications ↗
-        </a>
+      ${f.howClarkCanHelp ? `
+      <div class="faculty-detail">
+        <strong>How Clark can help their research</strong>
+        <p>${f.howClarkCanHelp}</p>
+      </div>` : ""}
+
+      ${f.contactPolicy ? `
+      <div class="faculty-detail contact-policy">
+        <strong>Contact rule</strong>
+        <p>${f.contactPolicy}</p>
+        ${f.recruitingNote ? `<p class="faculty-source-note">${f.recruitingNote}</p>` : ""}
+      </div>` : ""}
+
+      <div class="faculty-card-links">
+        <a href="${f.url}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Faculty profile ↗</a>
+        ${f.labUrl ? `<a href="${f.labUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Lab site ↗</a>` : ""}
       </div>
     </div>
   `).join("");
