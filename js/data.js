@@ -11,7 +11,7 @@
 
 const APPLICANT_PROFILE = {
   name: "Clark Jason Ngo",
-  title: "Software Engineer, Graduate Educator & Program Manager | Prospective Ph.D. Researcher",
+  title: "Software Engineer & AI Curriculum Builder (former Graduate Instructor) | Prospective Ph.D. Researcher",
   location: "Seattle, WA",
   heritage: "Filipino-Chinese (Multilingual: English, Tagalog, Mandarin)",
   links: {
@@ -60,11 +60,11 @@ const APPLICANT_PROFILE = {
     },
     {
       title: "Enterprise AI Course: Cloud-Based Full-Stack DevSecOps with Retrieval-Augmented Generation",
-      authors: "Ngo, C.",
-      venue: "UKC 2024 Conference (US-Korea Conference on Science, Technology, and Entrepreneurship)",
+      authors: "Ngo, C., & Chung, S.",
+      venue: "Proceedings of UKC 2024, San Francisco, CA (p. 238)",
       year: 2024,
-      type: "Conference Presentation",
-      url: "https://ukc.ksea.org/programs/proceeding-ukc2024",
+      type: "Conference Poster",
+      url: "https://clarkngo.github.io/research/publications/2024-enterprise-ai-course-rag",
       description: "Presented cutting-edge pedagogical framework integrating Retrieval-Augmented Generation (RAG) and automated DevSecOps pipelines into computer science and enterprise AI education."
     }
   ],
@@ -87,7 +87,12 @@ const APPLICANT_PROFILE = {
   ],
   academicExperience: [
     {
-      title: "Program Manager & Graduate Instructor",
+      title: "Student Worker — BSAI Program, Courses & AI Initiatives (current)",
+      organization: "City University of Seattle — School of Technology & Computing (STC)",
+      description: "Assists in building the new Bachelor of Science in AI (BSAI) program and its courses, and supports the school's AI initiatives."
+    },
+    {
+      title: "Program Manager & Graduate Instructor (former)",
       organization: "City University of Seattle — School of Technology & Computing (STC)",
       description: "Taught core graduate courses in full-stack development, cloud computing, cybersecurity, and AI for managers. Led student research groups and tech clubs."
     },
@@ -195,7 +200,7 @@ const PROGRAMS_DATA = [
         recruiting: "yes",
         recruitingNote: "Recruiting PhD students in youth, well-being, HCI and the learning sciences for the 2027 cycle.",
         contactPolicy: "Email OK (kdavis78@uw.edu). The iSchool FAQ says cold emails are welcomed. Keep it short and specific to her teacher/GenAI project.",
-        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark is a working graduate instructor who has shipped RAG/AI coursework (UKC 2024), so he can recruit and interview instructors, and build instrumented GenAI classroom tools and teacher dashboards for her studies.",
+        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark has been on the educator side of that question twice. As a former instructor, he designed and taught a RAG course, delivered as a research workshop and in a doctoral course, and students went on to use RAG in capstones and papers. He now assists in building CityU's BSAI program, courses and AI initiatives, where decisions about generative AI in the curriculum are part of the job. He can also build and deploy study tools. Supporting material: AI-Unplugged (K–12 AI-literacy activities, not yet tested with learners). Do NOT link the Alpha School 'classroom is broken' essay.",
         alignment: "Rank #1. Closest topical match to Clark's 2024 XAI-in-education proposal (instructor agency over AI recommendations)."
       },
       {
@@ -435,7 +440,7 @@ const PROGRAMS_DATA = [
     viabilitySummary: "Seattle U offers an Ed.D. (Doctor of Education) rather than a Ph.D. in Computer Science or Information Science. While Clark's leadership managing 87 veterans in the AWS program and teaching at CityU connects to educational leadership, an Ed.D. does not lead to research scientist roles or tenure-track CS/IS faculty positions.",
 
     strengthsMatch: [
-      "Values experienced program managers and higher education instructors.",
+      "Values experienced program managers and former higher education instructors.",
       "Mission of social justice aligns with Clark's military spouse/veteran support and underrepresented student mentorship."
     ],
     challengesToAddress: [
