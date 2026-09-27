@@ -2,7 +2,7 @@
  * PhD Application Tracker & Viability Matrix Data
  * Applicant: Clark Jason Ngo
  * Enhanced with 2024 UW Application Dossier Context:
- *   - Reference folder: reference-uw-2024-application
+ *   - Reference folder (local only, gitignored): private/reference-uw-2024-application
  *   - Recommenders: Dr. Sam Chung (Dean/Prof, former UW 14-yr faculty), Dr. Morgan Zantua (Assoc Prof, Dir. Center for Cybersecurity Innovation)
  *   - Research: Explainable AI (XAI) in Educational Systems, Human-in-the-loop Teacher Scaffolding
  *   - Target Faculty (verified recruiting for Autumn 2027 on 2026-09-26): iSchool — Katie Davis, Amy Ko, Jason Yip, Ben Lee;

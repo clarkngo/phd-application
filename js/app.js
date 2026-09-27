@@ -841,7 +841,7 @@ function renderDossierView() {
   container.innerHTML = `
     <!-- Top Strategic Context Banner -->
     <div class="summary-callout" style="margin-bottom: 2rem; border-left-color: var(--uw-purple);">
-      <strong>📁 Source Context: 2024 UW Information School Dossier (<code>reference-uw-2024-application</code>)</strong><br>
+      <strong>📁 Source Context: 2024 UW Information School Dossier (private, not published)</strong><br>
       In your 2024 application cycle, you authored a full suite of materials proposing <em>Explainable Artificial Intelligence (XAI) in Educational Systems</em>. 
       Below is the direct synthesis of your 2024 Statement of Purpose, Diversity Statement, Personal Statement, and Faculty Advisor justifications, paired with concrete upgrade strategies for your upcoming applications across <strong>UW iSchool</strong>, <strong>UW HCDE</strong>, and <strong>Seattle University</strong>.
     </div>
