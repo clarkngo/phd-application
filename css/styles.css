@@ -1770,3 +1770,173 @@ img {
 }
 
 .faculty-card-links .btn { flex: 1; text-align: center; }
+
+/* ==========================================================================
+   Advisor Outreach Tracker
+   ========================================================================== */
+.outreach-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.outreach-stat {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.outreach-stat span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.outreach-stat.attention span { color: var(--su-red); }
+
+.outreach-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-left: 5px solid var(--accent-green);
+  border-radius: var(--radius-lg);
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.outreach-card.mode-meeting { border-left-color: var(--accent-blue); }
+.outreach-card.mode-apply-only { border-left-color: var(--accent-amber); }
+
+.outreach-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.outreach-head h3 {
+  display: inline;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.outreach-priority {
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-right: 0.4rem;
+}
+
+.outreach-meta {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.outreach-meta a { color: var(--accent-blue); }
+
+.outreach-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.contact-mode-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.contact-mode-pill.mode-email { background-color: color-mix(in srgb, var(--accent-green) 18%, transparent); color: var(--accent-green); }
+.contact-mode-pill.mode-meeting { background-color: color-mix(in srgb, var(--accent-blue) 18%, transparent); color: var(--accent-blue); }
+.contact-mode-pill.mode-apply-only { background-color: color-mix(in srgb, var(--accent-amber) 18%, transparent); color: var(--accent-amber); }
+
+.outreach-why,
+.outreach-rule {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin: 0.6rem 0;
+}
+
+.outreach-rule {
+  border-left: 3px solid var(--accent-amber);
+  padding-left: 0.6rem;
+}
+
+.outreach-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.outreach-controls label,
+.outreach-notes-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.outreach-controls select,
+.outreach-controls input,
+.outreach-notes {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.35rem 0.5rem;
+}
+
+.outreach-prep {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+
+.outreach-draft {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.8rem;
+  margin: 0.75rem 0;
+}
+
+.outreach-draft summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.draft-body {
+  white-space: pre-wrap;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: 0.75rem 0;
+}
+
+.draft-placeholder {
+  background-color: color-mix(in srgb, var(--accent-amber) 28%, transparent);
+  color: var(--text-primary);
+  border-radius: 3px;
+  padding: 0 2px;
+}
+
+.outreach-nodraft {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.outreach-notes { width: 100%; resize: vertical; }

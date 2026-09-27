@@ -11,7 +11,7 @@ A responsive, high-performance static web application built for **Clark Ngo** to
 ## 🌟 Key Features
 
 1. **Strategic Viability Decision Engine**
-   - In-depth alignment analysis mapping Clark's background (**MSCS from City University of Seattle**, De La Salle BS, enterprise software engineering at Thomson Reuters/S&P/eBay, and Graduate Teaching Assistant experience) to each program's admissions preferences.
+   - In-depth alignment analysis mapping Clark's background (**MSCS from City University of Seattle**, De La Salle BS, enterprise software engineering at Thomson Reuters/S&P/eBay, and CityU teaching experience) to each program's admissions preferences.
    - Interactive weight sliders to dynamically adjust priorities (PhD vs. EdD distinction, CS alignment, pedagogy fit, funding security, and local proximity).
    - Specific positioning recommendations and SWOT matrices (Strengths vs. Admissions Gaps).
 

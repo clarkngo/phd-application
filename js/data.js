@@ -11,7 +11,7 @@
 
 const APPLICANT_PROFILE = {
   name: "Clark Jason Ngo",
-  title: "Software Engineer & AI Curriculum Builder (former Graduate Instructor) | Prospective Ph.D. Researcher",
+  title: "Software Engineer & AI Curriculum Builder (former Instructor) | Prospective Ph.D. Researcher",
   location: "Seattle, WA",
   heritage: "Filipino-Chinese (Multilingual: English, Tagalog, Mandarin)",
   links: {
@@ -92,9 +92,9 @@ const APPLICANT_PROFILE = {
       description: "Assists in building the new Bachelor of Science in AI (BSAI) program and its courses, and supports the school's AI initiatives."
     },
     {
-      title: "Program Manager & Graduate Instructor (former)",
+      title: "Program Manager & Instructor (former)",
       organization: "City University of Seattle — School of Technology & Computing (STC)",
-      description: "Taught core graduate courses in full-stack development, cloud computing, cybersecurity, and AI for managers. Led student research groups and tech clubs."
+      description: "Taught 11 course sections from Winter 2020 to Winter 2021 (about 206 total enrollments): Full-Stack Web Development (frontend and backend), Linux Operating Systems I–II, Cybersecurity, IT Service Management, Information Systems, Data Management, Communications & Networking, and IT for Managers, plus graduate courses Programming for Computing (CS 506) and Full-Stack Development II (CS 628). Led student research groups and tech clubs."
     },
     {
       title: "Apprenticeship Program Manager",
@@ -133,7 +133,7 @@ const APPLICANT_PROFILE = {
   coreStrengths: [
     "3 Published Papers in applied computing, pedagogy, and cloud security (CONISAR, CISSE, UKC 2024)",
     "Strong backing from UW insider faculty: Dr. Sam Chung (14-year former UW professor/founder of BS in IT)",
-    "Demonstrated impact training 87 veterans/spouses (AWS grant) and teaching graduate CS courses",
+    "Demonstrated impact training 87 veterans/spouses (AWS grant) and teaching 11 CityU course sections (undergraduate and graduate)",
     "Compelling socio-technical research statement combining XAI, instructor agency, and educational equity"
   ],
   strategicGaps: [
@@ -200,7 +200,7 @@ const PROGRAMS_DATA = [
         recruiting: "yes",
         recruitingNote: "Recruiting PhD students in youth, well-being, HCI and the learning sciences for the 2027 cycle.",
         contactPolicy: "Email OK (kdavis78@uw.edu). The iSchool FAQ says cold emails are welcomed. Keep it short and specific to her teacher/GenAI project.",
-        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark has been on the educator side of that question twice. As a former instructor, he designed and taught a RAG course, delivered as a research workshop and in a doctoral course, and students went on to use RAG in capstones and papers. He now assists in building CityU's BSAI program, courses and AI initiatives, where decisions about generative AI in the curriculum are part of the job. He can also build and deploy study tools. Supporting material: AI-Unplugged (K–12 AI-literacy activities, not yet tested with learners). Do NOT link the Alpha School 'classroom is broken' essay.",
+        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark has been on the educator side of that question twice. He designed a RAG course for CityU's doctoral program (he did not teach it there), taught RAG to a faculty research group and in a workshop, and students went on to use RAG in capstones and papers. He also taught a vibe-coding workshop for high school and undergraduate students from Korea. He now assists in building CityU's BSAI program, courses and AI initiatives, where decisions about generative AI in the curriculum are part of the job. He can also build and deploy study tools. Supporting material: AI-Unplugged (K–12 AI-literacy activities, not yet tested with learners). Do NOT link the Alpha School 'classroom is broken' essay.",
         alignment: "Rank #1. Closest topical match to Clark's 2024 XAI-in-education proposal (instructor agency over AI recommendations)."
       },
       {
@@ -677,3 +677,152 @@ const ADMISSIONS_STRATEGY_VERIFICATION = {
     ]
   }
 };
+
+// Advisor Outreach Tracker
+// contactMode drives what "outreach" means for each advisor:
+//   "email"      — cold email welcomed
+//   "meeting"    — open to meetings (HCDE recruitment page)
+//   "apply-only" — faculty asked NOT to be emailed / not taking meetings; name them in the application instead
+const OUTREACH_DATA = [
+  {
+    id: "davis",
+    name: "Prof. Katie Davis",
+    program: "UW iSchool",
+    email: "kdavis78@uw.edu",
+    contactMode: "email",
+    priority: 1,
+    targetDate: "2026-10-06",
+    why: "AI & Education; studying how teachers negotiate generative AI in their professional practice.",
+    draft: {
+      subject: "Prospective PhD applicant (Autumn 2027): generative AI from the educator's side",
+      body: `Dear Professor Davis,
+
+I'm applying to the iSchool PhD program for Autumn 2027, and your research on how teachers negotiate generative AI in their professional practice is the question I most want to study.
+
+I've seen that question from several sides. I taught 11 course sections at City University of Seattle between 2020 and 2021, mostly in full-stack web development, Linux and cybersecurity. I later designed a course on retrieval-augmented generation (RAG) for our doctoral program, taught RAG to a faculty research group and in a workshop, and presented the course design with Dr. Sam Chung as a poster at UKC 2024. Students went on to use RAG in their capstone projects and published papers. I also taught a vibe-coding workshop for high school and undergraduate students from Korea. I now work as a student worker in CityU's School of Technology & Computing, assisting in building our new Bachelor of Science in AI program, its courses, and the school's AI initiatives. Across these roles I've made decisions I had no evidence for, such as [ONE CONCRETE DECISION YOU ACTUALLY FACED]. I'd like to learn to study decisions like these rigorously.
+
+I've also built K–12 AI-literacy activities (AI Unplugged) that haven't yet been tested with learners. Learning to evaluate materials like these is part of why your lab appeals to me. My engineering background (full-stack and cloud) means I can build and deploy the tools a study needs.
+
+Are you considering students for Autumn 2027 whose interests center on teachers and generative AI? I've attached my CV and would be glad to talk if that would be useful.
+
+Best regards,
+Clark Ngo
+clarkngo.github.io`
+    },
+    prep: [
+      { id: "example", label: "Fill in the bracketed decision with one you actually faced (BSAI or vibe-coding workshop is strongest)" },
+      { id: "sections", label: "Confirm \"11 course sections, 2020–2021\" is your full teaching record" },
+      { id: "cv", label: "Attach the updated CV (new role, UKC poster with Sam Chung)" },
+      { id: "read", label: "Skim 1–2 of her recent teacher/GenAI papers so a follow-up call can be specific" },
+      { id: "backup", label: "After sending: back up this draft to your MS Word doc, then ask Claude to remove it from this public site" }
+    ]
+  },
+  {
+    id: "ko",
+    name: "Prof. Amy J. Ko",
+    program: "UW iSchool (or CSE)",
+    email: "",
+    contactMode: "apply-only",
+    priority: 2,
+    targetDate: "2026-11-15",
+    why: "Computing education research (CER): accessible, multilingual programmable media (Wordplay) and culturally responsive computing teaching.",
+    rule: "Do NOT email a CV or proposal and do not ask for a meeting. She reads every application that names her. Only write with a specific question about her lab's recent research.",
+    draft: {
+      subject: "Statement of Purpose paragraph (not an email)",
+      body: `I am applying to work with Professor Amy Ko on multilingual programmable media for learners. I grew up Filipino-Chinese in the Philippines, moving between English, Tagalog and Mandarin, and was mocked for my Mandarin before I became fluent enough to lead Mandarin-speaking analyst focus groups for five years. Almost every programming language a learner meets assumes English. I want to understand what changes when it doesn't: [YOUR RESEARCH QUESTION — e.g., how do bilingual novices move between a home-language and an English programming environment, and how does that shape whether they see computing as theirs?].
+
+I have started contributing to that question in practice by reviewing Wordplay's machine-translated Tagalog strings [N STRINGS REVIEWED / PR LINK — only once done]. My CONISAR 2021 paper on lowering the barrier to full-stack web development, and teaching 11 course sections at City University of Seattle, showed me where learners get stuck. But as Professor Ko's CER FAQ puts it, teaching is not research. Her lab is where I would learn to study these barriers through discovery and invention, not only address them in my own classroom.`
+    },
+    prep: [
+      { id: "cerfaq", label: "Read her CER FAQ and at least one foundation text it lists (e.g., How People Learn, Stuck in the Shallow End)" },
+      { id: "wordplay", label: "Review Wordplay's Tagalog strings in-app (Settings → ✎ localization mode). 6,783 machine-translated strings await review as of 2026-09-26" },
+      { id: "question", label: "Write your own research question for the bracketed sentence (not a tool idea)" },
+      { id: "name", label: "Name her in the iSchool faculty ranking (she also accepts CSE applicants)" },
+      { id: "backup", label: "Once copied into your SoP: back up this text to your MS Word doc, then ask Claude to remove it from this public site" }
+    ]
+  },
+  {
+    id: "yip",
+    name: "Prof. Jason C. Yip",
+    program: "UW iSchool",
+    email: "jcyip@uw.edu",
+    contactMode: "email",
+    priority: 3,
+    targetDate: "2026-10-13",
+    why: "KidsTeam UW: co-design with children, generative AI and children's creativity, AI literacy.",
+    draft: null,
+    prep: [
+      { id: "draft", label: "Draft email: lead with the vibe-coding workshop (Korean HS/undergrad students) and CodeDay mentoring" }
+    ]
+  },
+  {
+    id: "dasgupta",
+    name: "Prof. Sayamindu Dasgupta",
+    program: "UW HCDE",
+    email: "sdg1@uw.edu",
+    contactMode: "meeting",
+    priority: 4,
+    targetDate: "2026-10-13",
+    why: "Young people learning with and about data; multilingual learner tools. Recruiting 1–2, open to meetings.",
+    draft: null,
+    prep: [
+      { id: "draft", label: "Draft a short meeting request tied to his home-language learner tools work" }
+    ]
+  },
+  {
+    id: "mcdonald",
+    name: "Prof. David W. McDonald",
+    program: "UW HCDE",
+    email: "dwmc@uw.edu",
+    contactMode: "meeting",
+    priority: 5,
+    targetDate: "2026-10-20",
+    why: "Social computing and human-centered AI. Recruiting (open), open to meetings.",
+    draft: null,
+    prep: [
+      { id: "draft", label: "Draft a short meeting request (human-in-the-loop educator/AI tools angle)" }
+    ]
+  },
+  {
+    id: "blee",
+    name: "Prof. Ben Lee",
+    program: "UW iSchool",
+    email: "bcgl@uw.edu",
+    contactMode: "email",
+    priority: 6,
+    targetDate: "2026-10-20",
+    why: "Lab for Computing Cultural Heritage: ML search over archives (GovScape, Newspaper Navigator). Skills match, weak topic match.",
+    draft: null,
+    prep: [
+      { id: "decide", label: "Decide whether you'd genuinely do archive/search research. If not, skip him" }
+    ]
+  },
+  {
+    id: "kientz",
+    name: "Prof. Julie Kientz",
+    program: "UW HCDE",
+    email: "",
+    contactMode: "apply-only",
+    priority: 7,
+    targetDate: "2026-11-15",
+    why: "Technologies for children and families. Recruiting 1, not available for meetings.",
+    rule: "Not taking meetings. Name her in the HCDE faculty ranking instead.",
+    draft: null,
+    prep: [
+      { id: "name", label: "Rank her in the HCDE application (counts as a recruiting faculty member)" }
+    ]
+  },
+  {
+    id: "lucywang",
+    name: "Prof. Lucy Lu Wang",
+    program: "UW iSchool",
+    email: "",
+    contactMode: "apply-only",
+    priority: 8,
+    targetDate: "2026-11-15",
+    why: "AI reliability, agentic AI, AI evaluation. Skills match only; optional.",
+    rule: "Not replying to applicant emails. Tag her in the application if you include her.",
+    draft: null,
+    prep: []
+  }
+];

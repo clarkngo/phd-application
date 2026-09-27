@@ -59,6 +59,9 @@
       <button type="button" class="nav-tab" data-target="tab-faculty">
         🔬 Faculty Alignment
       </button>
+      <button type="button" class="nav-tab" data-target="tab-outreach">
+        ✉️ Advisor Outreach
+      </button>
       <button type="button" class="nav-tab" data-target="tab-dossier">
         📚 2024 Dossier & Evolution
       </button>
@@ -75,7 +78,7 @@
         <div class="hero-title-area">
           <h2>Doctoral Application Strategy & Roadmap</h2>
           <p>
-            Strategic evaluation and milestone management for <strong>Clark Ngo</strong>, former graduate instructor, now helping build CityU's BSAI program, and systems engineer. 
+            Strategic evaluation and milestone management for <strong>Clark Ngo</strong>, former CityU instructor, now helping build CityU's BSAI program, and systems engineer. 
             Comparing the <strong>UW Information School (iSchool)</strong>, <strong>UW Human Centered Design & Engineering (HCDE)</strong>, and <strong>Seattle University</strong> to pinpoint the most viable, fully funded Ph.D. path.
           </p>
 
@@ -223,6 +226,17 @@
       <div class="faculty-grid" id="facultyGridContainer">
         <!-- Dynamically populated by app.js -->
       </div>
+    </section>
+
+    <!-- TAB: ADVISOR OUTREACH -->
+    <section class="tab-pane" id="tab-outreach">
+      <div class="section-header">
+        <h2>Advisor Outreach Tracker</h2>
+        <p>One row per advisor, ordered by priority. The contact rule decides what outreach means for each advisor: an email, a meeting request, or naming them in the application only. Status, dates, notes and prep checkboxes are saved in this browser.</p>
+      </div>
+
+      <div id="outreachSummary" class="outreach-summary"></div>
+      <div id="outreachList"></div>
     </section>
 
     <!-- TAB 5: 2024 DOSSIER & EVOLUTION -->

@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderViabilityView();
   renderTrackerView();
   renderFacultyView();
+  renderOutreachView();
   renderDossierView();
   renderProfileView();
   initViabilitySliders();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const STORAGE_KEY_STATE = "clark_phd_tracker_state_v1";
 const STORAGE_KEY_WEIGHTS = "clark_phd_tracker_weights_v1";
 const STORAGE_KEY_THEME = "clark_phd_theme_pref";
+const STORAGE_KEY_OUTREACH = "clark_phd_outreach_v1";
 
 // Default State Generator
 function getDefaultState() {
@@ -624,6 +626,211 @@ function renderFacultyView() {
   `).join("");
 }
 
+// Advisor Outreach Tracker
+const OUTREACH_STATUSES = {
+  email: ["Not started", "Drafting", "Ready to send", "Sent", "Replied", "Meeting scheduled", "No reply (closed)"],
+  meeting: ["Not started", "Drafting", "Ready to send", "Sent", "Replied", "Meeting scheduled", "No reply (closed)"],
+  "apply-only": ["Not started", "Preparing", "Named in application"]
+};
+
+const CONTACT_MODE_LABELS = {
+  email: "Email welcome",
+  meeting: "Open to meetings",
+  "apply-only": "Don't email: name in application"
+};
+
+const FOLLOW_UP_DAYS = 10;
+
+// Local calendar date (YYYY-MM-DD); toISOString() would give the UTC date
+function localDateString(d = new Date()) {
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function loadOutreachState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY_OUTREACH);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveOutreachState(state) {
+  try {
+    localStorage.setItem(STORAGE_KEY_OUTREACH, JSON.stringify(state));
+  } catch (e) {
+    console.error("Failed to save outreach state", e);
+  }
+}
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function isFollowUpDue(entry) {
+  if (entry.status !== "Sent" || !entry.sentDate) return false;
+  const sent = new Date(`${entry.sentDate}T00:00:00`);
+  const days = (Date.now() - sent.getTime()) / 86400000;
+  return days >= FOLLOW_UP_DAYS;
+}
+
+function renderOutreachView() {
+  const list = document.getElementById("outreachList");
+  const summary = document.getElementById("outreachSummary");
+  if (!list || typeof OUTREACH_DATA === "undefined") return;
+
+  const state = loadOutreachState();
+  const advisors = [...OUTREACH_DATA].sort((a, b) => a.priority - b.priority);
+  const today = localDateString();
+
+  const entries = advisors.map(a => ({ advisor: a, entry: state[a.id] || { status: "Not started", prep: {} } }));
+  const count = pred => entries.filter(pred).length;
+  const contacted = count(({ entry }) => ["Sent", "Replied", "Meeting scheduled", "No reply (closed)"].includes(entry.status));
+  const replied = count(({ entry }) => ["Replied", "Meeting scheduled"].includes(entry.status));
+  const followUps = count(({ entry }) => isFollowUpDue(entry));
+  const overdue = count(({ advisor, entry }) => advisor.targetDate < today && ["Not started", "Drafting", "Preparing"].includes(entry.status));
+
+  summary.innerHTML = `
+    <div class="outreach-stat"><span>${contacted}/${count(({ advisor }) => advisor.contactMode !== "apply-only")}</span>Contacted</div>
+    <div class="outreach-stat"><span>${replied}</span>Replies</div>
+    <div class="outreach-stat ${followUps ? "attention" : ""}"><span>${followUps}</span>Follow-ups due</div>
+    <div class="outreach-stat ${overdue ? "attention" : ""}"><span>${overdue}</span>Past target date</div>
+  `;
+
+  list.innerHTML = entries.map(({ advisor: a, entry }) => {
+    const statuses = OUTREACH_STATUSES[a.contactMode];
+    const prepDone = a.prep.filter(p => entry.prep && entry.prep[p.id]).length;
+    const followUp = isFollowUpDue(entry);
+    const late = a.targetDate < today && ["Not started", "Drafting", "Preparing"].includes(entry.status);
+    const draftText = a.draft ? `${a.draft.subject}\n\n${a.draft.body}` : "";
+    const draftHtml = a.draft
+      ? escapeHtml(a.draft.body).replace(/\[([^\]]+)\]/g, '<mark class="draft-placeholder">[$1]</mark>')
+      : "";
+
+    return `
+      <div class="outreach-card mode-${a.contactMode}" id="outreach-${a.id}">
+        <div class="outreach-head">
+          <div>
+            <span class="outreach-priority">#${a.priority}</span>
+            <h3>${a.name}</h3>
+            <div class="outreach-meta">${a.program}${a.email ? ` &bull; <a href="mailto:${a.email}">${a.email}</a>` : ""}</div>
+          </div>
+          <div class="outreach-badges">
+            <span class="contact-mode-pill mode-${a.contactMode}">${CONTACT_MODE_LABELS[a.contactMode]}</span>
+            ${followUp ? `<span class="recruit-pill recruit-no">Follow-up due</span>` : ""}
+            ${late ? `<span class="recruit-pill recruit-no">Past target (${a.targetDate})</span>` : ""}
+          </div>
+        </div>
+
+        <p class="outreach-why">${a.why}</p>
+        ${a.rule ? `<p class="outreach-rule"><strong>Contact rule:</strong> ${a.rule}</p>` : ""}
+
+        <div class="outreach-controls">
+          <label>Status
+            <select class="outreach-status" data-id="${a.id}">
+              ${statuses.map(s => `<option ${s === entry.status ? "selected" : ""}>${s}</option>`).join("")}
+            </select>
+          </label>
+          <label>Target
+            <input type="date" value="${a.targetDate}" disabled>
+          </label>
+          ${a.contactMode !== "apply-only" ? `
+          <label>Sent on
+            <input type="date" class="outreach-sent" data-id="${a.id}" value="${entry.sentDate || ""}">
+          </label>` : ""}
+        </div>
+
+        ${a.prep.length ? `
+        <div class="outreach-prep">
+          <strong>Before sending (${prepDone}/${a.prep.length})</strong>
+          ${a.prep.map(p => `
+            <label class="checklist-item ${entry.prep && entry.prep[p.id] ? "completed" : ""}">
+              <input type="checkbox" class="custom-checkbox outreach-prep-check" data-id="${a.id}" data-prep="${p.id}" ${entry.prep && entry.prep[p.id] ? "checked" : ""}>
+              <span class="item-text">${p.label}</span>
+            </label>`).join("")}
+        </div>` : ""}
+
+        ${a.draft ? `
+        <details class="outreach-draft">
+          <summary>${a.contactMode === "apply-only" ? "Draft application text" : "Draft email"}: ${escapeHtml(a.draft.subject)}</summary>
+          <p class="outreach-rule"><strong>Public page:</strong> this draft is visible to anyone. Back it up to your Word doc and remove it from the site once it's sent or copied.</p>
+          <div class="draft-body">${draftHtml}</div>
+          <button type="button" class="btn btn-outline btn-sm outreach-copy" data-id="${a.id}">Copy ${a.contactMode === "apply-only" ? "text" : "subject + email"}</button>
+          <textarea class="outreach-copy-src" data-id="${a.id}" hidden>${escapeHtml(draftText)}</textarea>
+        </details>` : `<p class="outreach-nodraft">No draft yet.</p>`}
+
+        <label class="outreach-notes-label">Notes
+          <textarea class="outreach-notes" data-id="${a.id}" rows="2" placeholder="Replies, meeting notes, follow-up ideas...">${escapeHtml(entry.notes || "")}</textarea>
+        </label>
+      </div>
+    `;
+  }).join("");
+
+  attachOutreachEvents();
+}
+
+function attachOutreachEvents() {
+  const update = (id, fn) => {
+    const state = loadOutreachState();
+    const entry = state[id] || { status: "Not started", prep: {} };
+    fn(entry);
+    state[id] = entry;
+    saveOutreachState(state);
+  };
+
+  document.querySelectorAll(".outreach-status").forEach(sel => {
+    sel.addEventListener("change", e => {
+      const id = e.target.getAttribute("data-id");
+      update(id, entry => {
+        entry.status = e.target.value;
+        if (e.target.value === "Sent" && !entry.sentDate) entry.sentDate = localDateString();
+      });
+      renderOutreachView();
+    });
+  });
+
+  document.querySelectorAll(".outreach-sent").forEach(input => {
+    input.addEventListener("change", e => {
+      update(e.target.getAttribute("data-id"), entry => { entry.sentDate = e.target.value; });
+      renderOutreachView();
+    });
+  });
+
+  document.querySelectorAll(".outreach-prep-check").forEach(chk => {
+    chk.addEventListener("change", e => {
+      update(e.target.getAttribute("data-id"), entry => {
+        entry.prep = entry.prep || {};
+        entry.prep[e.target.getAttribute("data-prep")] = e.target.checked;
+      });
+      renderOutreachView();
+    });
+  });
+
+  document.querySelectorAll(".outreach-notes").forEach(area => {
+    area.addEventListener("change", e => {
+      update(e.target.getAttribute("data-id"), entry => { entry.notes = e.target.value; });
+      showToast("Notes saved");
+    });
+  });
+
+  document.querySelectorAll(".outreach-copy").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const id = btn.getAttribute("data-id");
+      const src = document.querySelector(`.outreach-copy-src[data-id="${id}"]`);
+      try {
+        await navigator.clipboard.writeText(src.value);
+        showToast("Draft copied. Replace the highlighted [placeholders] before sending.");
+      } catch (e) {
+        showToast("Copy failed. Select the text manually.");
+      }
+    });
+  });
+}
+
 // Render 2024 Application Dossier & Evolution View
 function renderDossierView() {
   const container = document.getElementById("dossierArchiveContainer");
@@ -978,7 +1185,7 @@ function initActionButtons() {
   const exportBtn = document.getElementById("exportStateBtn");
   if (exportBtn) {
     exportBtn.addEventListener("click", () => {
-      const state = loadTrackerState();
+      const state = { ...loadTrackerState(), outreach: loadOutreachState() };
       const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(state, null, 2));
       const downloadAnchor = document.createElement("a");
       downloadAnchor.setAttribute("href", dataStr);
