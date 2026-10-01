@@ -694,23 +694,23 @@ const OUTREACH_DATA = [
     targetDate: "2026-10-06",
     why: "AI & Education; studying how teachers negotiate generative AI in their professional practice.",
     draft: {
-      subject: "Prospective PhD applicant (Autumn 2027): generative AI from the educator's side",
+      subject: "Prospective PhD applicant (Autumn 2027): the boundaries educators draw around generative AI",
       body: `Dear Professor Davis,
 
-I'm applying to the iSchool PhD program for Autumn 2027, and your research on how teachers negotiate generative AI in their professional practice is the question I most want to study.
+I read "Relief or Displacement?" (CHI 2026) with a jolt of recognition. One teacher's rule, that AI is fine while students are growing but at mastery time they must show they can do it without that support, is almost exactly a line I have been drawing, without evidence, in computing education.
 
-I've seen that question from several sides. I taught 11 course sections at City University of Seattle between 2020 and 2021, mostly in full-stack web development, Linux and cybersecurity. I later designed a course on retrieval-augmented generation (RAG) for our doctoral program, taught RAG to a faculty research group and in a workshop, and presented the course design with Dr. Sam Chung as a poster at UKC 2024. Students went on to use RAG in their capstone projects and published papers. I also taught a vibe-coding workshop for high school and undergraduate students from Korea. I now work as a student worker in CityU's School of Technology & Computing, assisting in building our new Bachelor of Science in AI program, its courses, and the school's AI initiatives. Across these roles I've made decisions I had no evidence for, such as [ONE CONCRETE DECISION YOU ACTUALLY FACED]. I'd like to learn to study decisions like these rigorously.
+I'm applying to the iSchool PhD program for Autumn 2027. I taught 11 course sections at City University of Seattle in 2020–2021, mostly full-stack web development, Linux and cybersecurity. Since then I have made three different calls about how much learners need to understand the code behind their work. In a RAG course I designed for our doctoral program, we provided the code so students could focus on architecture. In a vibe-coding workshop I taught for high school and undergraduate students from Korea, students only had to present their app and idea. In CityU's new Bachelor of Science in AI program, which I'm helping build, students must disclose their AI use, because understanding matters more.
 
-I've also built K–12 AI-literacy activities (AI Unplugged) that haven't yet been tested with learners. Learning to evaluate materials like these is part of why your lab appeals to me. My engineering background (full-stack and cloud) means I can build and deploy the tools a study needs.
+Your study focused on K–12 teachers in one district and called for research across other settings. I'd like to study the boundaries educators draw in computing education, where AI can now write the very thing students are learning to make, and what those boundaries mean for young people's ability to evaluate, explain and fix what AI builds for them. I can also build and deploy the tools such studies need.
 
-Are you considering students for Autumn 2027 whose interests center on teachers and generative AI? I've attached my CV and would be glad to talk if that would be useful.
+Are you considering students for Autumn 2027 with interests in this direction? My CV is attached, and I'd welcome a brief conversation if it would be useful.
 
 Best regards,
 Clark Ngo
 clarkngo.github.io`
     },
     prep: [
-      { id: "example", label: "Fill in the bracketed decision with one you actually faced (BSAI or vibe-coding workshop is strongest)" },
+      { id: "paper", label: "Read Relief or Displacement? (CHI '26) sections 4.3 and 5. The email opens with it" },
       { id: "sections", label: "Confirm \"11 course sections, 2020–2021\" is your full teaching record" },
       { id: "cv", label: "Attach the updated CV (new role, UKC poster with Sam Chung)" },
       { id: "read", label: "Skim 1–2 of her recent teacher/GenAI papers so a follow-up call can be specific" },
