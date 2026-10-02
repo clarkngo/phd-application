@@ -22,13 +22,19 @@ const APPLICANT_PROFILE = {
   },
   degrees: [
     {
-      degree: "Master of Science in Computer Science (MSCS)",
+      degree: "Master of Science in Data Science (MSDS), in progress (Sep 2025 – expected Jun 2027)",
+      institution: "City University of Seattle",
+      location: "Seattle, WA",
+      focus: "Current F-1 program. Expected to finish before an Autumn 2027 PhD start"
+    },
+    {
+      degree: "Master of Science in Computer Science (MSCS), 2018–2019",
       institution: "City University of Seattle",
       location: "Seattle, WA",
       focus: "Cloud Systems, Full-Stack Architecture, Serverless Computing, DevSecOps & AI Workflows"
     },
     {
-      degree: "Master of Business Administration (MBA)",
+      degree: "Master of Business Administration (MBA), Jan 2024 – Sep 2025 · GPA 3.9",
       institution: "City University of Seattle",
       location: "Seattle, WA",
       focus: "Technology Management, Organizational Leadership, Enterprise Information Systems"
@@ -137,7 +143,7 @@ const APPLICANT_PROFILE = {
     "Demonstrated impact training 87 veterans/spouses (AWS grant) and teaching 11 CityU course sections (undergraduate and graduate)",
     "Compelling socio-technical research statement combining XAI, instructor agency, and educational equity"
   ],
-  visaStatus: "F-1 (international student). Funded, full-time, in-person programs only; Seattle University's Ed.D. ruled out on 2026-10-02.",
+  visaStatus: "F-1 (international student), currently through the CityU MSDS (expected Jun 2027). Funded, full-time, in-person programs only; Seattle University's Ed.D. ruled out on 2026-10-02.",
   strategicGaps: [
     "F-1: secure a funded offer (needed for the I-20) and TA spoken-English eligibility (Duolingo/IELTS/TOEFL speaking score)",
     "Expanding peer-reviewed publication venue reach into top-tier ACM venues (CHI, SIGCSE, CSCW)",
@@ -293,7 +299,7 @@ const PROGRAMS_DATA = [
       { id: "personal", label: "Personal Statement (350 words: Journey from finance to software engineering & teaching)", completed: false },
       { id: "diversity", label: "Diversity Statement (Filipino-Chinese identity, AWS veteran cohorts, CodeDay mentoring)", completed: false },
       { id: "cv", label: "Academic CV (Include 3 papers: CONISAR, CISSE, UKC 2024, plus CityU/eBay experience)", completed: false },
-      { id: "transcripts", label: "Transcripts (CityU MSCS, CityU MBA, and DLSU BS)", completed: false },
+      { id: "transcripts", label: "Transcripts (CityU MSDS in progress, MSCS, MBA, and DLSU BS)", completed: false },
       { id: "lor_chung", label: "LOR #1: Dr. Sam Chung (Dean & Prof, former 14-yr UW tenured faculty)", completed: false },
       { id: "lor_zantua", label: "LOR #2: Dr. Morgan Zantua (Assoc Prof & Center Director)", completed: false },
       { id: "lor_third", label: "LOR #3: Industry/Academic Recommender (eBay Director or CityU Colleague)", completed: false },
@@ -408,7 +414,7 @@ const PROGRAMS_DATA = [
       { id: "sop", label: "Statement of Purpose (Reframe 2024 XAI proposal toward Human-Centered Interaction Design & advisor synergy)", completed: false },
       { id: "edi", label: "Equity, Diversity & Inclusion Statement (Leverage 2024 diversity narrative: AWS veterans & CodeDay)", completed: false },
       { id: "cv", label: "Curriculum Vitae (Highlight software architecture and research publications)", completed: false },
-      { id: "transcripts", label: "Unofficial transcripts (CityU MSCS, MBA, DLSU BS)", completed: false },
+      { id: "transcripts", label: "Unofficial transcripts (CityU MSDS in progress, MSCS, MBA, DLSU BS)", completed: false },
       { id: "letters", label: "3 Letters of Recommendation (Dr. Sam Chung, Dr. Morgan Zantua, Industry Lead)", completed: false },
       { id: "faculty_selection", label: "Rank 2–4 faculty in the portal. At least one MUST be recruiting, or the application is denied", completed: false },
       { id: "portfolio_link", label: "Include links to clarkngo.github.io learning platforms and capstone", completed: false },
@@ -490,7 +496,7 @@ const PROGRAMS_DATA = [
       { id: "sop", label: "Statement of Purpose (Learning Sciences research questions & theoretical interest)", completed: false },
       { id: "writing_sample", label: "Academic Writing Sample (Include CONISAR or CISSE paper)", completed: false },
       { id: "cv", label: "Academic Curriculum Vitae", completed: false },
-      { id: "transcripts", label: "Transcripts (CityU MSCS, MBA, DLSU BS)", completed: false },
+      { id: "transcripts", label: "Transcripts (CityU MSDS in progress, MSCS, MBA, DLSU BS)", completed: false },
       { id: "letters", label: "3 Letters of Recommendation", completed: false },
       { id: "f1_funding", label: "🛂 F-1: Funding is not guaranteed here. Without a funding offer, your I-20 needs proof of personal funds for out-of-state tuition (~$38,616/yr) plus living costs. Ask edinfo@uw.edu about RA/TA support for international students before applying", completed: false }
     ]
