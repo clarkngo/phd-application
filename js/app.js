@@ -843,7 +843,7 @@ function renderDossierView() {
     <div class="summary-callout" style="margin-bottom: 2rem; border-left-color: var(--uw-purple);">
       <strong>📁 Source Context: 2024 UW Information School Dossier (private, not published)</strong><br>
       In your 2024 application cycle, you authored a full suite of materials proposing <em>Explainable Artificial Intelligence (XAI) in Educational Systems</em>. 
-      Below is the direct synthesis of your 2024 Statement of Purpose, Diversity Statement, Personal Statement, and Faculty Advisor justifications, paired with concrete upgrade strategies for your upcoming applications across <strong>UW iSchool</strong>, <strong>UW HCDE</strong>, and <strong>Seattle University</strong>.
+      Below is the direct synthesis of your 2024 Statement of Purpose, Diversity Statement, Personal Statement, and Faculty Advisor justifications, paired with concrete upgrade strategies for your upcoming applications across <strong>UW iSchool</strong>, <strong>UW HCDE</strong>, and <strong>UW College of Education</strong>.
     </div>
 
     <!-- Core Essay Cards Grid -->
@@ -1160,8 +1160,7 @@ function recalculateViabilityScores(weights) {
   const traits = {
     "uw-ischool": { degreeType: 100, csAlignment: 90, teachingFit: 95, fundingSecurity: 100, localProximity: 100 },
     "uw-hcde": { degreeType: 100, csAlignment: 88, teachingFit: 85, fundingSecurity: 100, localProximity: 100 },
-    "seattleu-eoll": { degreeType: 40, csAlignment: 35, teachingFit: 80, fundingSecurity: 40, localProximity: 100 },
-    "uw-education": { degreeType: 100, csAlignment: 65, teachingFit: 90, fundingSecurity: 85, localProximity: 100 }
+    "uw-education": { degreeType: 100, csAlignment: 65, teachingFit: 90, fundingSecurity: 40, localProximity: 100 }
   };
 
   const totalWeight = Object.values(weights).reduce((a, b) => a + b, 0) || 1;

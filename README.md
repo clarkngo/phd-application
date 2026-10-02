@@ -3,7 +3,6 @@
 A responsive, high-performance static web application built for **Clark Ngo** to track and evaluate doctoral program applications across the Seattle academic ecosystem:
 - **University of Washington (UW) — Information School (iSchool)**: *Ph.D. in Information Science*
 - **University of Washington (UW) — Human Centered Design & Engineering (HCDE)**: *Ph.D. in Human Centered Design & Engineering*
-- **Seattle University — College of Education**: *Ed.D. in Educational & Organizational Learning & Leadership (EOLL)*
 - **UW College of Education (Alternative Ph.D.)**: *Ph.D. in Education (Learning Sciences & Human Development)*
 
 ---
@@ -33,7 +32,7 @@ A responsive, high-performance static web application built for **Clark Ngo** to
    - Academic CV synthesis, research agenda summary, and teaching highlights.
 
 6. **Modern Design System**
-   - University color themes: UW Purple & Gold, Seattle U Red, and modern slate accents.
+   - University color themes: UW Purple & Gold and modern slate accents.
    - System-aware Dark and Light modes with manual toggle.
    - Mobile-first, fully responsive, zero-build vanilla JS architecture (instant loading on GitHub Pages).
 

@@ -5,6 +5,7 @@
  *   - Reference folder (local only, gitignored): private/reference-uw-2024-application
  *   - Recommenders: Dr. Sam Chung (Dean/Prof, former UW 14-yr faculty), Dr. Morgan Zantua (Assoc Prof, Dir. Center for Cybersecurity Innovation)
  *   - Research: Explainable AI (XAI) in Educational Systems, Human-in-the-loop Teacher Scaffolding
+ *   - Visa: F-1. Seattle University Ed.D. removed (not admitting; F-1 / self-funded cohort model).
  *   - Target Faculty (verified recruiting for Autumn 2027 on 2026-09-26): iSchool — Katie Davis, Amy Ko, Jason Yip, Ben Lee;
  *     HCDE — Sayamindu Dasgupta, Julie Kientz, David McDonald
  */
@@ -136,7 +137,9 @@ const APPLICANT_PROFILE = {
     "Demonstrated impact training 87 veterans/spouses (AWS grant) and teaching 11 CityU course sections (undergraduate and graduate)",
     "Compelling socio-technical research statement combining XAI, instructor agency, and educational equity"
   ],
+  visaStatus: "F-1 (international student). Funded, full-time, in-person programs only; Seattle University's Ed.D. ruled out on 2026-10-02.",
   strategicGaps: [
+    "F-1: secure a funded offer (needed for the I-20) and TA spoken-English eligibility (Duolingo/IELTS/TOEFL speaking score)",
     "Expanding peer-reviewed publication venue reach into top-tier ACM venues (CHI, SIGCSE, CSCW)",
     "Tailoring the 2024 iSchool Statement of Purpose into an HCDE user-centered research framing for the dual application",
     "Securing faculty alignment early (Sept–Oct) with PIs who welcome contact — and respecting the ones who explicitly say not to email (Amy Ko, Lucy Lu Wang)"
@@ -294,6 +297,8 @@ const PROGRAMS_DATA = [
       { id: "lor_chung", label: "LOR #1: Dr. Sam Chung (Dean & Prof, former 14-yr UW tenured faculty)", completed: false },
       { id: "lor_zantua", label: "LOR #2: Dr. Morgan Zantua (Assoc Prof & Center Director)", completed: false },
       { id: "lor_third", label: "LOR #3: Industry/Academic Recommender (eBay Director or CityU Colleague)", completed: false },
+      { id: "f1_spoken_english", label: "🛂 F-1: Take a spoken-English test for TA eligibility (Duolingo Conversation 140, IELTS speaking 7.0, or TOEFL iBT speaking 5). Your US master's exempts you from the admission English requirement, but not from the TA speaking requirement (that needs a US bachelor's or PhD)", completed: false },
+      { id: "f1_sevis", label: "🛂 F-1: Ask CityU's international student office (DSO) about transferring your SEVIS record to UW for Autumn 2027", completed: false },
       { id: "early_submission", label: "⚡ Submit by ~Nov 15, 2026 (buffer for letters/transcripts; the official deadline is Dec 2)", completed: false }
     ]
   },
@@ -407,67 +412,8 @@ const PROGRAMS_DATA = [
       { id: "letters", label: "3 Letters of Recommendation (Dr. Sam Chung, Dr. Morgan Zantua, Industry Lead)", completed: false },
       { id: "faculty_selection", label: "Rank 2–4 faculty in the portal. At least one MUST be recruiting, or the application is denied", completed: false },
       { id: "portfolio_link", label: "Include links to clarkngo.github.io learning platforms and capstone", completed: false },
+      { id: "f1_spoken_english", label: "🛂 F-1: Same spoken-English test as the iSchool (Duolingo Conversation 140, IELTS speaking 7.0, or TOEFL iBT speaking 5). HCDE funding is RA/TA-based, so TA eligibility matters", completed: false },
       { id: "early_submission", label: "⚡ Submit by ~Nov 15, 2026 (buffer for letters; the official deadline is Dec 2)", completed: false }
-    ]
-  },
-
-  {
-    id: "seattleu-eoll",
-    name: "Seattle University College of Education",
-    shortName: "Seattle U Ed.D.",
-    university: "Seattle University",
-    college: "College of Education",
-    degree: "Doctor of Education (Ed.D.) in Educational & Organizational Learning & Leadership (EOLL)",
-    degreeType: "EdD",
-    location: "Seattle, WA (Capitol Hill Campus)",
-    deadline: "Cohort based (Admissions currently under revision)",
-    deadlineFormatted: "Program Under Revision (Contact Admissions for Upcoming Cohorts)",
-    badgeColor: "seattleu-red",
-    portalUrl: "https://www.seattleu.edu/admissions-aid/executive-professional-admissions/",
-    websiteUrl: "https://www.seattleu.edu/academics/all-programs/educational-organizational-learning-leadership/",
-    officialLinks: [
-      { label: "EOLL Ed.D. program page", url: "https://www.seattleu.edu/academics/all-programs/educational-organizational-learning-leadership/" },
-      { label: "Executive & Professional Admissions", url: "https://www.seattleu.edu/admissions-aid/executive-professional-admissions/" }
-    ],
-    tagline: "Practitioner-scholar leadership model for transformative educational change and organizational equity.",
-    competitiveness: "Moderate / Selective (Cohort-based)",
-    fundingModel: "Tuition-Paying / Self-Funded (Tuition scholarships, employer assistance, or loans; typically no full PhD research stipend)",
-    greRequired: false,
-    greNote: "GRE is not required.",
-
-    viabilityScore: 60,
-    viabilityCategory: "Moderate Fit (Important Strategic Considerations)",
-    viabilitySummary: "Seattle U offers an Ed.D. (Doctor of Education) rather than a Ph.D. in Computer Science or Information Science. While Clark's leadership managing 87 veterans in the AWS program and teaching at CityU connects to educational leadership, an Ed.D. does not lead to research scientist roles or tenure-track CS/IS faculty positions.",
-
-    strengthsMatch: [
-      "Values experienced program managers and former higher education instructors.",
-      "Mission of social justice aligns with Clark's military spouse/veteran support and underrepresented student mentorship."
-    ],
-    challengesToAddress: [
-      "Degree Distinction: Awards an Ed.D., not a Ph.D. Clark specifically stated needing a PhD.",
-      "Funding: Ed.D. programs are usually tuition-paying without the guaranteed 4-5 year living stipends of UW Ph.D. programs.",
-      "Admissions Status (verified 2026-09-26): the program page says Seattle U is \"revising and reimagining\" EOLL and asks prospective students to check back. No 2027 cohort deadline is published.",
-      "Research Focus: Focuses on school administration and organizational policy rather than software engineering, AI, or HCI."
-    ],
-    recommendedPositioning: "Only pursue if your primary career goal is higher-education administration, community college deanship, or organizational leadership. For technical research, academic faculty in computing, or AI R&D, UW iSchool or HCDE Ph.D. is the appropriate path.",
-
-    facultyMatches: [
-      {
-        name: "College of Education Graduate Faculty",
-        title: "Leadership & Learning Faculty",
-        lab: "Department of Educational Leadership",
-        researchAreas: ["Organizational Learning", "Higher Education Leadership", "Social Justice in Pedagogy"],
-        url: "https://www.seattleu.edu/education/",
-        alignment: "Applicable for leadership in technical education and institutional diversity."
-      }
-    ],
-
-    requirementsList: [
-      { id: "sop", label: "Statement of Intent (Framed around organizational leadership and tech education)", completed: false },
-      { id: "cv", label: "Professional Resume / CV (Highlighting AWS program management and teaching)", completed: false },
-      { id: "transcripts", label: "Official Transcripts from all previously attended accredited institutions", completed: false },
-      { id: "letters", label: "2-3 Professional Recommendations (Dr. Sam Chung, Dr. Morgan Zantua)", completed: false },
-      { id: "cohort_inquiry", label: "Contact Graduate Admissions regarding Reimagined Program Cohort status", completed: false }
     ]
   },
 
@@ -497,8 +443,8 @@ const PROGRAMS_DATA = [
     greRequired: false,
     greNote: "GRE scores not required.",
 
-    viabilityScore: 80,
-    viabilityCategory: "Promising Interdisciplinary Option",
+    viabilityScore: 70,
+    viabilityCategory: "Backup Option (F-1 Funding Risk)",
     viabilitySummary: "If Clark wants a research Ph.D. in education (rather than an Ed.D.), the UW College of Education's Learning Sciences & Human Development (LSHD) area is a compelling alternative. It investigates how people learn with cognitive tools, AI, and digital environments. Funding is not guaranteed on the program page, so confirm it before investing effort.",
 
     strengthsMatch: [
@@ -507,6 +453,7 @@ const PROGRAMS_DATA = [
       "Allows cross-campus collaboration with UW iSchool and Paul G. Allen School of CSE."
     ],
     challengesToAddress: [
+      "F-1 risk: no guaranteed funding on the program page. An I-20 requires proof of funds, so an unfunded admission may not be usable.",
       "Requires deeper grounding in learning theories, socio-cultural theories of cognition, and qualitative educational research methods.",
       "Less focus on direct software architecture and engineering than iSchool or HCDE."
     ],
@@ -544,7 +491,8 @@ const PROGRAMS_DATA = [
       { id: "writing_sample", label: "Academic Writing Sample (Include CONISAR or CISSE paper)", completed: false },
       { id: "cv", label: "Academic Curriculum Vitae", completed: false },
       { id: "transcripts", label: "Transcripts (CityU MSCS, MBA, DLSU BS)", completed: false },
-      { id: "letters", label: "3 Letters of Recommendation", completed: false }
+      { id: "letters", label: "3 Letters of Recommendation", completed: false },
+      { id: "f1_funding", label: "🛂 F-1: Funding is not guaranteed here. Without a funding offer, your I-20 needs proof of personal funds for out-of-state tuition (~$38,616/yr) plus living costs. Ask edinfo@uw.edu about RA/TA support for international students before applying", completed: false }
     ]
   }
 ];
@@ -572,7 +520,7 @@ const VIABILITY_CRITERIA = [
     key: "fundingSecurity",
     name: "Full Funding & Stipend",
     weight: 15,
-    description: "Availability of 4-5 year guaranteed tuition waiver, living stipend, and RA/TA employment."
+    description: "Guaranteed tuition waiver, stipend, and RA/TA employment. On an F-1 visa this also determines whether you can show the proof of funds your I-20 requires."
   },
   {
     key: "localProximity",
@@ -640,7 +588,7 @@ const APPLICATION_2024_DOSSIER = {
 };
 
 // Strategic Admissions Verification & Guidance
-// Every claim below was checked against official UW / Seattle U pages on 2026-09-26.
+// Every claim below was checked against official UW pages on 2026-09-26.
 const ADMISSIONS_STRATEGY_VERIFICATION = {
   verifiedOn: "2026-09-26",
   deadlineTruth: {
