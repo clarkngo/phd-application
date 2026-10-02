@@ -34,7 +34,7 @@ const APPLICANT_PROFILE = {
       focus: "Cloud Systems, Full-Stack Architecture, Serverless Computing, DevSecOps & AI Workflows"
     },
     {
-      degree: "Master of Business Administration (MBA), Jan 2024 – Sep 2025 · GPA 3.9",
+      degree: "Master of Business Administration (MBA), started before the MSCS, completed Jan 2024 – Sep 2025 · GPA 3.9",
       institution: "City University of Seattle",
       location: "Seattle, WA",
       focus: "Technology Management, Organizational Leadership, Enterprise Information Systems"
