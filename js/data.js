@@ -884,3 +884,110 @@ I have started contributing to that question in practice by reviewing Wordplay's
     prep: []
   }
 ];
+
+// Programs researched and screened out (or pending an F-1 inquiry).
+// Checked against official pages; dates noted per entry.
+const SCREENED_PROGRAMS = [
+  {
+    id: "uw-tacoma-edd",
+    name: "UW Tacoma — Ed.D. in Educational Leadership",
+    suggestedBy: "Dean/mentor",
+    checkedOn: "2026-10-13",
+    verdict: "Unlikely on F-1: pending inquiry",
+    verdictLevel: "pending",
+    facts: [
+      "Practice doctorate (Ed.D.), not a research PhD. Ends in a Dissertation in Practice.",
+      "Recruiting the SUMMER 2027 ONLINE cohort. Applications due Jan 6, 2027.",
+      "Online, or hybrid with two in-person days a month (Fri/Sat), plus a one-week summer residency each year.",
+      "3 years, 123 credits, minimum 10 credits per quarter. Areas include higher education, community, and Tribal/Indigenous leadership.",
+      "Not fully funded and no assistantships. International students can apply for the School of Education merit scholarship (min. graduate GPA 3.3)."
+    ],
+    f1Issue: "F-1 students generally can't count more than one online class per term toward full-time enrollment, so an online cohort likely can't support an I-20. No funding means showing proof of personal funds.",
+    nextStep: "Inquiry email drafted (I-20 eligibility, in-person option, funding). Send to aew7@uw.edu.",
+    links: [
+      { label: "Program home", url: "https://www.tacoma.uw.edu/soe/EdD" },
+      { label: "How to apply", url: "https://www.tacoma.uw.edu/soe/EdD/how-apply" },
+      { label: "FAQ", url: "https://www.tacoma.uw.edu/soe/EdD/frequently-asked-questions-faqs-0" },
+      { label: "Tuition & funding", url: "https://www.tacoma.uw.edu/soe/EdD/tuition-rates-funding-opportunities" },
+      { label: "Study areas", url: "https://www.tacoma.uw.edu/soe/EdD/study-areas" },
+      { label: "Info sessions", url: "https://www.tacoma.uw.edu/soe/EdD/information-sessions" }
+    ]
+  },
+  {
+    id: "wwu-edd",
+    name: "Western Washington University — Ed.D. in Education Leadership",
+    suggestedBy: "Dean/mentor",
+    checkedOn: "2026-10-13",
+    verdict: "Poor fit: pending inquiry",
+    verdictLevel: "pending",
+    facts: [
+      "No education PhD found at WWU. This is an Ed.D. for aspiring superintendents and district leaders (US and Canada).",
+      "Applicants submit copies of current education certificates. US students start with the Superintendent Certificate coursework.",
+      "Offered in Everett, WA and British Columbia, 87 credits. Deadlines: May 1 (summer start), Aug 1 (fall start).",
+      "No program funding listed. International students need proof of funds for one year and can't get financial aid."
+    ],
+    f1Issue: "I-20 eligibility isn't stated for this program, and Clark holds no US teaching or administrator certificate.",
+    nextStep: "Inquiry email drafted (I-20, full-time format, certificate requirement, assistantships). Send to gradschool@wwu.edu and CC WWU international student services.",
+    links: [
+      { label: "Program page", url: "https://gradschool.wwu.edu/education-leadership" },
+      { label: "Educational Leadership dept.", url: "https://wce.wwu.edu/edad" },
+      { label: "Superintendent Certificate", url: "https://gradschool.wwu.edu/superintendents-certificate" },
+      { label: "International students", url: "https://gradschool.wwu.edu/international-students" },
+      { label: "International student costs", url: "https://gradschool.wwu.edu/international-graduate-student-costs" },
+      { label: "Assistantships", url: "https://gradschool.wwu.edu/teaching-assistantships" }
+    ]
+  },
+  {
+    id: "uw-edd-l4l",
+    name: "UW Seattle — Ed.D. Leadership for Learning",
+    suggestedBy: "Clark",
+    checkedOn: "2026-10-10",
+    verdict: "Ruled out for 2027",
+    verdictLevel: "out",
+    facts: [
+      "Fee-based: about $60,710 total ($625/credit, 2024–27 rate). No program funding.",
+      "For practicing PK-12 and education-system leaders. Admits a new cohort every 3 years.",
+      "Deadline Feb 1, 2027 for the July 2027 cohort."
+    ],
+    f1Issue: "Unfunded, and the page says nothing about I-20 eligibility. Proof of funds would be about $60K plus living costs.",
+    nextStep: "None unless UW International Student Services confirms I-20 eligibility.",
+    links: [
+      { label: "Program page", url: "https://education.uw.edu/academics/program/leadership-for-learning" },
+      { label: "UW Ed.D. overview", url: "https://education.uw.edu/academics/degree/doctor-education-edd" }
+    ]
+  },
+  {
+    id: "uw-tetlj",
+    name: "UW Seattle — Teacher Education & Teacher Learning for Justice (Ed.D./Ph.D.)",
+    suggestedBy: "Clark",
+    checkedOn: "2026-10-10",
+    verdict: "Closed for 2027",
+    verdictLevel: "out",
+    facts: [
+      "\"We will not be accepting new applicants for the 2027 cycle.\" Next start is 2028.",
+      "Favors applicants with 3+ years of K-12 classroom teaching. Tuition-based."
+    ],
+    f1Issue: "Not applicable this cycle.",
+    nextStep: "Revisit for 2028 only if plans change.",
+    links: [
+      { label: "Program page", url: "https://education.uw.edu/academics/program/teacher-education-learning-justice" }
+    ]
+  },
+  {
+    id: "seattleu-eoll",
+    name: "Seattle University — Ed.D. Educational & Organizational Learning & Leadership",
+    suggestedBy: "Clark",
+    checkedOn: "2026-10-02",
+    verdict: "Ruled out",
+    verdictLevel: "out",
+    facts: [
+      "Program is being \"revised and reimagined\" and isn't accepting applications.",
+      "Self-funded, cohort-based practitioner doctorate."
+    ],
+    f1Issue: "Not admitting, and self-funded.",
+    nextStep: "None.",
+    links: [
+      { label: "Program page", url: "https://www.seattleu.edu/academics/all-programs/educational-organizational-learning-leadership/" }
+    ]
+  }
+];

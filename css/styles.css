@@ -1945,3 +1945,37 @@ img {
 }
 
 .outreach-notes { width: 100%; resize: vertical; }
+
+/* ==========================================================================
+   Screened Programs
+   ========================================================================== */
+.screened-header { margin-top: 2rem; }
+
+.screened-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.6rem;
+  padding: 0.75rem 1rem;
+}
+
+.screened-card summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.screened-name { font-weight: 600; color: var(--text-primary); }
+
+.screened-body {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  margin-top: 0.6rem;
+}
+
+.screened-body ul { padding-left: 1.1rem; margin: 0.5rem 0; }
+.screened-body li { margin-bottom: 0.3rem; }
+.screened-meta { font-size: 0.75rem; color: var(--text-muted); }

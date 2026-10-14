@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCountdown();
   renderStrategyAlert();
   renderDashboard();
+  renderScreenedPrograms();
   renderViabilityView();
   renderTrackerView();
   renderFacultyView();
@@ -256,6 +257,30 @@ function renderLinkList(links, heading) {
       </ul>
     </div>
   `;
+}
+
+// Render programs that were researched and screened out
+function renderScreenedPrograms() {
+  const container = document.getElementById("screenedPrograms");
+  if (!container || typeof SCREENED_PROGRAMS === "undefined") return;
+
+  const levelClass = { pending: "verdict-partial", out: "recruit-no" };
+
+  container.innerHTML = SCREENED_PROGRAMS.map(p => `
+    <details class="screened-card" id="screened-${p.id}">
+      <summary>
+        <span class="screened-name">${p.name}</span>
+        <span class="verdict-pill ${levelClass[p.verdictLevel] || ""}">${p.verdict}</span>
+      </summary>
+      <div class="screened-body">
+        <div class="screened-meta">Suggested by ${p.suggestedBy} &bull; Checked ${p.checkedOn}</div>
+        <ul>${p.facts.map(f => `<li>${f}</li>`).join("")}</ul>
+        <p class="outreach-rule"><strong>F-1 issue:</strong> ${p.f1Issue}</p>
+        <p><strong>Next step:</strong> ${p.nextStep}</p>
+        ${renderLinkList(p.links, "Official pages")}
+      </div>
+    </details>
+  `).join("");
 }
 
 // Render verified admissions-strategy callout (deadline reality + advisor matching)
