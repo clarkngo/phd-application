@@ -543,6 +543,11 @@ img {
   color: var(--su-red);
 }
 
+.university-pill.foster-teal {
+  background-color: color-mix(in srgb, var(--accent-teal) 15%, transparent);
+  color: var(--accent-teal);
+}
+
 .university-pill.uw-purple-light {
   background-color: #f3e8ff;
   color: #7e22ce;
@@ -824,7 +829,7 @@ img {
 
 .viability-card.uw-ischool::before { background-color: var(--uw-purple); }
 .viability-card.uw-hcde::before { background-color: var(--uw-gold-dark); }
-.viability-card.seattleu-eoll::before { background-color: var(--su-red); }
+.viability-card.uw-foster-is::before { background-color: var(--accent-teal); }
 .viability-card.uw-education::before { background-color: var(--uw-purple-light); }
 
 .viability-card-head {

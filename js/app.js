@@ -1160,6 +1160,7 @@ function recalculateViabilityScores(weights) {
   const traits = {
     "uw-ischool": { degreeType: 100, csAlignment: 90, teachingFit: 95, fundingSecurity: 100, localProximity: 100 },
     "uw-hcde": { degreeType: 100, csAlignment: 88, teachingFit: 85, fundingSecurity: 100, localProximity: 100 },
+    "uw-foster-is": { degreeType: 100, csAlignment: 85, teachingFit: 50, fundingSecurity: 90, localProximity: 100 },
     "uw-education": { degreeType: 100, csAlignment: 65, teachingFit: 90, fundingSecurity: 40, localProximity: 100 }
   };
 

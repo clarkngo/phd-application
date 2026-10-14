@@ -424,6 +424,110 @@ const PROGRAMS_DATA = [
   },
 
   {
+    id: "uw-foster-is",
+    name: "UW Foster School of Business — Ph.D. (Information Systems)",
+    shortName: "UW Foster IS",
+    university: "University of Washington",
+    college: "Michael G. Foster School of Business",
+    degree: "Ph.D. in Business Administration (Information Systems major area)",
+    degreeType: "PhD",
+    location: "Seattle, WA (UW Seattle Campus)",
+    deadline: "2026-12-15T23:59:59-08:00",
+    deadlineFormatted: "December 15, 2026 (Autumn 2027 admission only)",
+    badgeColor: "foster-teal",
+    portalUrl: "https://apply.grad.uw.edu/portal/gr_app",
+    websiteUrl: "https://foster.uw.edu/academics/degree-programs/phd-program/",
+    officialLinks: [
+      { label: "PhD program home", url: "https://foster.uw.edu/academics/degree-programs/phd-program/" },
+      { label: "Admissions criteria", url: "https://foster.uw.edu/academics/degree-programs/phd-program/admissions/" },
+      { label: "Information Systems area", url: "https://foster.uw.edu/academics/degree-programs/phd-program/major-areas-of-specialization/information-systems/" },
+      { label: "Faculty directory", url: "https://foster.uw.edu/faculty-research/directory/" },
+      { label: "AI at Foster", url: "https://foster.uw.edu/about-foster-school/ai-at-foster/" },
+      { label: "UW Grad School application portal", url: "https://apply.grad.uw.edu/portal/gr_app" }
+    ],
+    tagline: "Management of the development, use, and impact of information systems and technologies in organizations.",
+    competitiveness: "Very High (admitted IS students usually score above 650 on the GMAT)",
+    fundingModel: "Goal of at least 4 years of support for all PhD students (tuition waiver, TA/RA salary, health benefits). Funding eligibility needs a spoken-English score",
+    greRequired: true,
+    greNote: "GMAT or GRE required, no waivers (scores must be from the last 5 years). The IS area 'strongly prefers' the GMAT; successful applicants usually score above 650.",
+
+    viabilityScore: 74,
+    viabilityCategory: "Funded Pivot Option (GMAT/GRE Required)",
+    viabilitySummary: "Foster's IS area studies how organizations develop, use, and are affected by technology, using mainly economics and econometrics methods. Clark's finance BS, MBA (GPA 3.9), MSDS, and industry engineering fit the profile. The research framing shifts from learners to organizations: how institutions adopt and govern generative AI, and what that does to people's judgment and skills. The binding constraint is a competitive GMAT or GRE score before Dec 15.",
+
+    strengthsMatch: [
+      "Quantitative and business background: finance BS, MBA (GPA 3.9), MSCS, MSDS in progress, and work at Thomson Reuters, S&P Global and eBay Ads.",
+      "Léonard Boussioux studies generative AI and creative problem-solving (Organization Science, 2024) and human-AI collaboration. That's close to Clark's 'outsourcing the thinking' question, in an organizational setting.",
+      "Uttara Ananthakrishnan studies technology's societal effects, including on young people (short-form video and sleep; hate speech on content posted by minors), and platform governance, using causal inference.",
+      "Fully funded PhD, so it works for the F-1 I-20."
+    ],
+    challengesToAddress: [
+      "GMAT or GRE is required with no waivers. Clark wants to test within a month and feels rusty at math problem solving.",
+      "The IS area assumes advanced calculus, linear algebra, statistics, and programming, and requires PhD-level microeconomics and econometrics coursework. Show quantitative readiness in the SoP (MSDS coursework).",
+      "A US master's doesn't satisfy Foster's English requirement for funding. Needs a speaking score: TOEFL iBT speaking 4.5, IELTS speaking 6.0–6.5, or Duolingo 125.",
+      "The topic must be reframed from education to organizations and information systems. Pure computing-education research is not Foster's focus.",
+      "Foster's IS pages don't publish which faculty are taking students. Ask the IS area coordinator."
+    ],
+    recommendedPositioning: "Position as an information systems researcher on the organizational adoption and governance of generative AI. How do institutions (universities, school districts, firms) decide how people may use AI, and how do those decisions affect human judgment, skill, and equity? Use Clark's BSAI disclosure decision, district AI rollouts, and the ThinkCheck audit as motivating cases, with econometric and causal-inference methods from the MSDS.",
+
+    facultyMatches: [
+      {
+        name: "Prof. Léonard Boussioux",
+        title: "Assistant Professor of Information Systems",
+        lab: "AI, LLMs, optimization & the future of work",
+        researchAreas: ["Generative AI & Creative Problem-Solving", "Human-AI Collaboration", "LLMs & Decision-Making", "Future of Work"],
+        url: "https://foster.uw.edu/faculty-research/directory/leonard-boussioux/",
+        labUrl: "https://www.leobix.us/",
+        recruiting: "unknown",
+        recruitingNote: "Foster doesn't publish per-faculty recruiting status. His profile doesn't mention PhD students.",
+        contactPolicy: "Foster says applicants can contact faculty directly about research. Send a short, specific email referencing his Organization Science paper.",
+        howClarkCanHelp: "His work asks how generative AI changes human problem-solving and evaluation. Clark can bring LLM engineering skills, a multilingual angle, and his question about when AI assistance preserves or replaces human thinking.",
+        alignment: "Foster Rank #1: closest topic match (generative AI and human judgment)."
+      },
+      {
+        name: "Prof. Uttara M. Ananthakrishnan",
+        title: "Associate Professor of Information Systems; Faculty Director, MSIS",
+        lab: "Technology, Business & Policy",
+        researchAreas: ["Platform Governance", "Societal & Youth Effects of Technology", "Causal Inference", "NLP & Content Moderation"],
+        url: "https://foster.uw.edu/faculty-research/directory/uttara-m-ananthakrishnan/",
+        labUrl: "https://www.uttara.info/",
+        recruiting: "unknown",
+        recruitingNote: "Recruiting status not published.",
+        contactPolicy: "Contacting faculty about research is welcomed. Keep it short and tied to one of her papers.",
+        howClarkCanHelp: "She studies technology's effects on young people and platform governance with causal inference. Clark's MSDS, data engineering, and youth-and-AI interest could extend that work to generative AI.",
+        alignment: "Foster Rank #2: youth-and-technology impact with rigorous causal methods."
+      },
+      {
+        name: "Prof. Mingwen Yang",
+        title: "Assistant Professor; IS Area Faculty Coordinator",
+        lab: "Information Systems PhD area",
+        researchAreas: ["IS PhD admissions questions"],
+        url: "https://foster.uw.edu/academics/degree-programs/phd-program/major-areas-of-specialization/information-systems/",
+        labUrl: "",
+        recruiting: "unknown",
+        recruitingNote: "Listed as the IS area contact for applicant questions.",
+        contactPolicy: "Email with area-specific questions: which faculty are taking students, and how GMAT Focus or GRE scores compare to the 'above 650' guideline.",
+        howClarkCanHelp: "Not an advisor match. This is the right contact for admissions questions.",
+        alignment: "Admissions contact, not a research match."
+      }
+    ],
+
+    requirementsList: [
+      { id: "test_decide", label: "📝 This week: take one free official practice test each (GMAT Focus on mba.com, GRE POWERPREP on ets.org). Pick the test with the better baseline", completed: false },
+      { id: "test_book", label: "📝 Book the GMAT or GRE for about Nov 10. That leaves time for one retake and for scores to reach Foster before Dec 15", completed: false },
+      { id: "test_take", label: "📝 Take the test and send scores to UW Foster (unofficial scores accepted for review; official scores required if admitted)", completed: false },
+      { id: "f1_spoken_english", label: "🛂 F-1: English speaking score for funding (TOEFL speaking 4.5 / IELTS speaking 6.0–6.5 / Duolingo 125). The iSchool test target (Duolingo Conversation 140 / IELTS speaking 7.0 / TOEFL speaking 5) covers both", completed: false },
+      { id: "coordinator_email", label: "✉️ Email the IS area coordinator: which faculty are taking students for 2027, and how GMAT Focus/GRE scores map to the 'above 650' guideline", completed: false },
+      { id: "faculty_contact", label: "✉️ Short research emails to Léonard Boussioux and Uttara Ananthakrishnan (faculty contact is encouraged)", completed: false },
+      { id: "sop", label: "Statement of Purpose: objectives + teaching and research interests, framed around the organizational adoption and governance of generative AI", completed: false },
+      { id: "cv", label: "CV (Foster-tailored: quantitative coursework, MBA GPA 3.9, MSDS, industry)", completed: false },
+      { id: "transcripts", label: "Unofficial transcripts (CityU MSDS in progress, MSCS, MBA, DLSU BS)", completed: false },
+      { id: "letters", label: "3 letters of recommendation. Tell Dr. Chung and Dr. Zantua about Foster; letters from research-active faculty are valued", completed: false },
+      { id: "submit", label: "⚡ Submit by ~Dec 8, 2026 (deadline Dec 15)", completed: false }
+    ]
+  },
+
+  {
     id: "uw-education",
     name: "UW College of Education (Alternative Ph.D. Option)",
     shortName: "UW Education Ph.D.",
