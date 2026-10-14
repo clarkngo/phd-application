@@ -513,7 +513,9 @@ const PROGRAMS_DATA = [
     ],
 
     requirementsList: [
-      { id: "test_decide", label: "📝 This week: take one free official practice test each (GMAT Focus on mba.com, GRE POWERPREP on ets.org). Pick the test with the better baseline", completed: false },
+      { id: "practice_gmat", label: "📝 Take the free official GMAT Focus practice exam on <a href=\"https://www.mba.com/\" target=\"_blank\" rel=\"noopener noreferrer\">mba.com</a> and record your score", completed: false },
+      { id: "practice_gre", label: "📝 Take the free official GRE POWERPREP practice test on <a href=\"https://www.ets.org/gre.html\" target=\"_blank\" rel=\"noopener noreferrer\">ets.org</a> and record your score", completed: false },
+      { id: "test_decide", label: "📝 Compare the two baselines and pick the test (if close, choose the GMAT: Foster IS strongly prefers it)", completed: false },
       { id: "test_book", label: "📝 Book the GMAT or GRE for about Nov 10. That leaves time for one retake and for scores to reach Foster before Dec 15", completed: false },
       { id: "test_take", label: "📝 Take the test and send scores to UW Foster (unofficial scores accepted for review; official scores required if admitted)", completed: false },
       { id: "f1_spoken_english", label: "🛂 F-1: English speaking score for funding (TOEFL speaking 4.5 / IELTS speaking 6.0–6.5 / Duolingo 125). The iSchool test target (Duolingo Conversation 140 / IELTS speaking 7.0 / TOEFL speaking 5) covers both", completed: false },
@@ -749,7 +751,7 @@ const OUTREACH_DATA = [
     email: "kdavis78@uw.edu",
     contactMode: "email",
     priority: 1,
-    targetDate: "2026-10-06",
+    targetDate: "2026-10-17",
     why: "AI & Education; studying how teachers negotiate generative AI in their professional practice.",
     draft: {
       subject: "Prospective PhD applicant (Autumn 2027): the boundaries educators draw around generative AI",
@@ -893,7 +895,7 @@ const SCREENED_PROGRAMS = [
     name: "UW Tacoma — Ed.D. in Educational Leadership",
     suggestedBy: "Dean/mentor",
     checkedOn: "2026-10-13",
-    verdict: "Unlikely on F-1: pending inquiry",
+    verdict: "Inquiry sent: awaiting reply",
     verdictLevel: "pending",
     facts: [
       "Practice doctorate (Ed.D.), not a research PhD. Ends in a Dissertation in Practice.",
@@ -903,7 +905,7 @@ const SCREENED_PROGRAMS = [
       "Not fully funded and no assistantships. International students can apply for the School of Education merit scholarship (min. graduate GPA 3.3)."
     ],
     f1Issue: "F-1 students generally can't count more than one online class per term toward full-time enrollment, so an online cohort likely can't support an I-20. No funding means showing proof of personal funds.",
-    nextStep: "Inquiry email drafted (I-20 eligibility, in-person option, funding). Send to aew7@uw.edu.",
+    nextStep: "Inquiry sent 2026-10-13 (aew7@uw.edu). Awaiting reply on I-20 eligibility and format.",
     links: [
       { label: "Program home", url: "https://www.tacoma.uw.edu/soe/EdD" },
       { label: "How to apply", url: "https://www.tacoma.uw.edu/soe/EdD/how-apply" },
@@ -918,7 +920,7 @@ const SCREENED_PROGRAMS = [
     name: "Western Washington University — Ed.D. in Education Leadership",
     suggestedBy: "Dean/mentor",
     checkedOn: "2026-10-13",
-    verdict: "Poor fit: pending inquiry",
+    verdict: "Inquiry sent: awaiting reply",
     verdictLevel: "pending",
     facts: [
       "No education PhD found at WWU. This is an Ed.D. for aspiring superintendents and district leaders (US and Canada).",
@@ -927,7 +929,7 @@ const SCREENED_PROGRAMS = [
       "No program funding listed. International students need proof of funds for one year and can't get financial aid."
     ],
     f1Issue: "I-20 eligibility isn't stated for this program, and Clark holds no US teaching or administrator certificate.",
-    nextStep: "Inquiry email drafted (I-20, full-time format, certificate requirement, assistantships). Send to gradschool@wwu.edu and CC WWU international student services.",
+    nextStep: "Inquiry sent 2026-10-13 (gradschool@wwu.edu). Awaiting reply on I-20 eligibility and format.",
     links: [
       { label: "Program page", url: "https://gradschool.wwu.edu/education-leadership" },
       { label: "Educational Leadership dept.", url: "https://wce.wwu.edu/edad" },
