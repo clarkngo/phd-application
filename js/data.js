@@ -919,17 +919,17 @@ const SCREENED_PROGRAMS = [
     id: "wwu-edd",
     name: "Western Washington University — Ed.D. in Education Leadership",
     suggestedBy: "Dean/mentor",
-    checkedOn: "2026-10-13",
-    verdict: "Inquiry sent: awaiting reply",
-    verdictLevel: "pending",
+    checkedOn: "2026-10-15",
+    verdict: "Ruled out: confirmed by WWU",
+    verdictLevel: "out",
     facts: [
-      "No education PhD found at WWU. This is an Ed.D. for aspiring superintendents and district leaders (US and Canada).",
-      "Applicants submit copies of current education certificates. US students start with the Superintendent Certificate coursework.",
-      "Offered in Everett, WA and British Columbia, 87 credits. Deadlines: May 1 (summer start), Aug 1 (fall start).",
-      "No program funding listed. International students need proof of funds for one year and can't get financial aid."
+      "WWU reply (2026-10-15): the program is delivered by distance learning and \"does not meet F1 visa requirements.\"",
+      "No teaching assistantships are offered.",
+      "A pathway exists for students not pursuing the superintendent certificate, but that doesn't fix the F-1 issue.",
+      "No education PhD found at WWU. This is an Ed.D. for aspiring superintendents and district leaders."
     ],
-    f1Issue: "I-20 eligibility isn't stated for this program, and Clark holds no US teaching or administrator certificate.",
-    nextStep: "Inquiry sent 2026-10-13 (gradschool@wwu.edu). Awaiting reply on I-20 eligibility and format.",
+    f1Issue: "Confirmed by WWU: distance learning does not meet F-1 visa requirements.",
+    nextStep: "None. Closed. Reply forwarded to the dean if needed.",
     links: [
       { label: "Program page", url: "https://gradschool.wwu.edu/education-leadership" },
       { label: "Educational Leadership dept.", url: "https://wce.wwu.edu/edad" },
