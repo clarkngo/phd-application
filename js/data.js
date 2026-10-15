@@ -894,25 +894,25 @@ const SCREENED_PROGRAMS = [
     id: "uw-tacoma-edd",
     name: "UW Tacoma — Ed.D. in Educational Leadership",
     suggestedBy: "Dean/mentor",
-    checkedOn: "2026-10-13",
-    verdict: "Inquiry sent: awaiting reply",
+    checkedOn: "2026-10-15",
+    verdict: "2027 cohort: not viable (online) · 2028 hybrid: possible but unfunded",
     verdictLevel: "pending",
     facts: [
-      "Practice doctorate (Ed.D.), not a research PhD. Ends in a Dissertation in Practice.",
-      "Recruiting the SUMMER 2027 ONLINE cohort. Applications due Jan 6, 2027.",
-      "Online, or hybrid with two in-person days a month (Fri/Sat), plus a one-week summer residency each year.",
-      "3 years, 123 credits, minimum 10 credits per quarter. Areas include higher education, community, and Tribal/Indigenous leadership.",
-      "Not fully funded and no assistantships. International students can apply for the School of Education merit scholarship (min. graduate GPA 3.3)."
+      "UW Tacoma reply (2026-10-14): they can issue an I-20 for the Ed.D.",
+      "The Summer 2027 cohort is fully online: synchronous sessions one weekend a month, plus an in-person one-week intensive each summer.",
+      "Cohorts alternate between hybrid and fully remote. The next hybrid cohort is admitted for Summer 2028.",
+      "No assistantships. International students may apply for scholarships they're eligible for.",
+      "Practice doctorate (Ed.D.), 3 years, 123 credits. Ends in a Dissertation in Practice."
     ],
-    f1Issue: "F-1 students generally can't count more than one online class per term toward full-time enrollment, so an online cohort likely can't support an I-20. No funding means showing proof of personal funds.",
-    nextStep: "Inquiry sent 2026-10-13 (aew7@uw.edu). Awaiting reply on I-20 eligibility and format.",
+    f1Issue: "A fully online cohort can't normally support F-1 full-time enrollment, so the I-20 \"yes\" most likely applies only to the hybrid cohort. Even the 2028 hybrid (in person two days a month) needs a Designated School Official to confirm it counts as full-time in person. No funding means proof of personal funds for the I-20.",
+    nextStep: "Optional: ask UW Tacoma's international student office whether the Summer 2028 hybrid cohort meets F-1 full-time in-person rules. Treat it only as a fallback for 2028 if the PhD applications don't work out.",
     links: [
       { label: "Program home", url: "https://www.tacoma.uw.edu/soe/EdD" },
       { label: "How to apply", url: "https://www.tacoma.uw.edu/soe/EdD/how-apply" },
       { label: "FAQ", url: "https://www.tacoma.uw.edu/soe/EdD/frequently-asked-questions-faqs-0" },
       { label: "Tuition & funding", url: "https://www.tacoma.uw.edu/soe/EdD/tuition-rates-funding-opportunities" },
       { label: "Study areas", url: "https://www.tacoma.uw.edu/soe/EdD/study-areas" },
-      { label: "Info sessions", url: "https://www.tacoma.uw.edu/soe/EdD/information-sessions" }
+      { label: "Info sessions (RSVP)", url: "https://www.tacoma.uw.edu/soe/EdD/information-sessions" }
     ]
   },
   {
