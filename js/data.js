@@ -146,6 +146,7 @@ const APPLICANT_PROFILE = {
   visaStatus: "F-1 (international student), currently through the CityU MSDS (expected Jun 2027). Funded, full-time, in-person programs only; Seattle University's Ed.D. ruled out on 2026-10-02.",
   strategicGaps: [
     "F-1: secure a funded offer (needed for the I-20) and TA spoken-English eligibility (Duolingo/IELTS/TOEFL speaking score)",
+    "F-1 timeline: OPT and STEM OPT were already used after the MSCS, so there's no OPT after the MSDS (June 2027). An Autumn 2027 start, reached by transferring SEVIS within the grace period, is the realistic path. Confirm the dates with CityU's DSO",
     "Expanding peer-reviewed publication venue reach into top-tier ACM venues (CHI, SIGCSE, CSCW)",
     "Tailoring the 2024 iSchool Statement of Purpose into an HCDE user-centered research framing for the dual application",
     "Securing faculty alignment early (Sept–Oct) with PIs who welcome contact — and respecting the ones who explicitly say not to email (Amy Ko, Lucy Lu Wang)"
@@ -895,8 +896,8 @@ const SCREENED_PROGRAMS = [
     name: "UW Tacoma — Ed.D. in Educational Leadership",
     suggestedBy: "Dean/mentor",
     checkedOn: "2026-10-15",
-    verdict: "2027 cohort: not viable (online) · 2028 hybrid: possible but unfunded",
-    verdictLevel: "pending",
+    verdict: "Ruled out: 2027 cohort online; 2028 hybrid too late for F-1 timeline",
+    verdictLevel: "out",
     facts: [
       "UW Tacoma reply (2026-10-14): they can issue an I-20 for the Ed.D.",
       "The Summer 2027 cohort is fully online: synchronous sessions one weekend a month, plus an in-person one-week intensive each summer.",
@@ -905,7 +906,7 @@ const SCREENED_PROGRAMS = [
       "Practice doctorate (Ed.D.), 3 years, 123 credits. Ends in a Dissertation in Practice."
     ],
     f1Issue: "A fully online cohort can't normally support F-1 full-time enrollment, so the I-20 \"yes\" most likely applies only to the hybrid cohort. Even the 2028 hybrid (in person two days a month) needs a Designated School Official to confirm it counts as full-time in person. No funding means proof of personal funds for the I-20.",
-    nextStep: "Optional: ask UW Tacoma's international student office whether the Summer 2028 hybrid cohort meets F-1 full-time in-person rules. Treat it only as a fallback for 2028 if the PhD applications don't work out.",
+    nextStep: "None. Clark's OPT and STEM OPT were used after the MSCS, so there's no work-authorization bridge from the MSDS end (June 2027) to a Summer 2028 start. The hybrid cohort can't serve as a fallback.",
     links: [
       { label: "Program home", url: "https://www.tacoma.uw.edu/soe/EdD" },
       { label: "How to apply", url: "https://www.tacoma.uw.edu/soe/EdD/how-apply" },
