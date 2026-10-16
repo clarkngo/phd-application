@@ -545,7 +545,11 @@ const PROGRAMS_DATA = [
     portalUrl: "https://grad.uw.edu/admissions/apply-now/",
     websiteUrl: "https://education.uw.edu/programs/graduate/educational-psychology/learning-sciences-human-development",
     officialLinks: [
-      { label: "LSHD program page", url: "https://education.uw.edu/programs/graduate/educational-psychology/learning-sciences-human-development" },
+      { label: "All Ph.D. areas (11)", url: "https://education.uw.edu/academics/degree/doctor-philosophy-phd" },
+      { label: "LSHD program page", url: "https://education.uw.edu/academics/program/learning-sciences-human-development" },
+      { label: "Leadership in Higher Education (alt. area)", url: "https://education.uw.edu/academics/program/leadership-higher-education" },
+      { label: "Funding, aid & scholarships", url: "https://education.uw.edu/admissions/funding" },
+      { label: "Assistantships", url: "https://education.uw.edu/admissions/funding/assistantship" },
       { label: "Application deadlines", url: "https://education.uw.edu/admissions/deadlines" },
       { label: "Graduate admission requirements", url: "https://education.uw.edu/admissions/graduate/requirements" },
       { label: "UW Grad School application portal", url: "https://grad.uw.edu/admissions/apply-now/" }
@@ -566,7 +570,8 @@ const PROGRAMS_DATA = [
       "Allows cross-campus collaboration with UW iSchool and Paul G. Allen School of CSE."
     ],
     challengesToAddress: [
-      "F-1 risk: no guaranteed funding on the program page. An I-20 requires proof of funds, so an unfunded admission may not be usable.",
+      "F-1 risk (verified 2026-10-16): the College says it \"cannot guarantee full or partial funding for all of our admitted students.\" TA/RA positions \"may become available during the year.\" Ph.D. programs are tuition-based (out-of-state ~$12,872/quarter), and admitted students submit a statement of financial ability.",
+      "Funding in education Ph.D.s usually comes through a faculty member's grant (an RA position). Contact LSHD faculty early to ask whether they have funded positions for Autumn 2027.",
       "Requires deeper grounding in learning theories, socio-cultural theories of cognition, and qualitative educational research methods.",
       "Less focus on direct software architecture and engineering than iSchool or HCDE."
     ],
