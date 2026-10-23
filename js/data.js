@@ -352,7 +352,7 @@ const PROGRAMS_DATA = [
       "Julie Kientz is recruiting one student (children and families) but is NOT available for meetings. Name her in the rankings rather than asking for a call.",
       "Must re-orient the SoP from purely algorithmic XAI to interaction design, teacher user studies, cognitive load, and human-AI collaborative workflows."
     ],
-    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank Dasgupta and Hsieh (recruiting, HCDE primary), with Kientz as a third; consider James Pierce (adjunct) as a co-adviser for human-AI interaction. HCDE asks for 2–4 ranked faculty, and at least one must be a recruiting HCDE faculty member.",
+    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank up to 4: Dasgupta, Hsieh and Tseng (recruiting, HCDE primary), then Kientz or Starbird; consider James Pierce (adjunct) as a co-adviser for human-AI interaction. HCDE asks for 2–4 ranked faculty, and at least one must be a recruiting HCDE faculty member.",
 
     facultyMatches: [
       {
@@ -380,6 +380,32 @@ const PROGRAMS_DATA = [
         contactPolicy: "NOT available for meetings. Don't ask for a call. Name her in the application's faculty rankings.",
         howClarkCanHelp: "Clark can rapidly build high-fidelity prototypes for her field deployments with families and learners.",
         alignment: "HCDE Rank #2. Recruiting and topically relevant (learning technologies), though family-focused."
+      },
+      {
+        name: "Prof. Emily Tseng",
+        title: "Assistant Professor (joined HCDE 2026)",
+        lab: "Sociotechnical Safety Lab",
+        researchAreas: ["Responsible AI & AI Safety", "Participatory AI Evaluation & Governance", "Social & Emotional Uses of AI", "Security & Privacy"],
+        url: "https://www.hcde.washington.edu/tseng",
+        labUrl: "https://emtseng.me/",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page (2026-10-23): open to students on (1) social and emotional uses of AI and their safety, and (2) participatory governance and community control over AI in high-risk domains. Her lab is part of Microsoft's External Red Team Alliance (EXTRA).",
+        contactPolicy: "Watch her information session recording first (linked from the HCDE recruitment page). Meeting preference not stated. Email: emtseng@uw.edu.",
+        howClarkCanHelp: "Education is widely treated as a high-risk AI domain, and Clark's BSAI disclosure policy is a case of an institution governing AI use. ThinkCheck is a participatory-style AI evaluation. His AI red-team and evaluation side projects (OWASP LLM Top 10 catalog, eval harness) match her lab's red-teaming work.",
+        alignment: "HCDE Rank #2–3 candidate: governance and evaluation of AI in a high-risk domain (education and youth) fits both his research question and his engineering skills."
+      },
+      {
+        name: "Prof. Kate Starbird",
+        title: "Professor",
+        lab: "Center for an Informed Public",
+        researchAreas: ["Trust & AI", "Rumors, Disinformation & Propaganda", "Qualitative & Mixed Methods", "Visual Content (Photos/Video)"],
+        url: "https://www.hcde.washington.edu/starbird",
+        labUrl: "",
+        recruiting: "yes",
+        recruitingNote: "HCDE recruitment page (2026-10-23): will take ONE new student for 2027/28 in disinformation, trust and AI, or sports and online discourse. Competitive applicants bring qualitative or mixed-methods interest, especially on visual content.",
+        contactPolicy: "NOT available for meetings. Name her in the application instead.",
+        howClarkCanHelp: "Her 'trust and AI' area overlaps with Clark's question of when people trust AI output. Clark's weaker side for her is qualitative and visual-content methods, so frame mixed methods as what he wants to learn.",
+        alignment: "Stretch: one slot, a methods emphasis outside Clark's strengths. Rank 4th at most."
       },
       {
         name: "Prof. James Pierce (adjunct)",
@@ -856,7 +882,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW HCDE (co-adviser)",
     email: "",
     contactMode: "email",
-    priority: 6,
+    priority: 7,
     targetDate: "2026-10-30",
     why: "Recruiting 1 student: human-AI interaction, plus trust, control and privacy in AI products. Can co-advise only (HCDE requires an HCDE-primary adviser).",
     draft: null,
@@ -866,12 +892,40 @@ I have started contributing to that question in practice by reviewing Wordplay's
     ]
   },
   {
+    id: "tseng",
+    name: "Prof. Emily Tseng",
+    program: "UW HCDE",
+    email: "emtseng@uw.edu",
+    contactMode: "email",
+    priority: 6,
+    targetDate: "2026-10-30",
+    why: "Sociotechnical Safety Lab: participatory governance of AI in high-risk domains, social and emotional uses of AI, AI red-teaming (Microsoft EXTRA).",
+    draft: null,
+    prep: [
+      { id: "session", label: "Watch her information session recording (linked on the HCDE recruitment page)" },
+      { id: "draft", label: "Draft a short email: governing AI use in education (a high-risk domain), BSAI disclosure policy, ThinkCheck as an AI evaluation" }
+    ]
+  },
+  {
+    id: "starbird",
+    name: "Prof. Kate Starbird",
+    program: "UW HCDE",
+    email: "",
+    contactMode: "apply-only",
+    priority: 9,
+    targetDate: "2026-11-15",
+    why: "One slot for 2027/28 in trust and AI (among other areas). Values qualitative and mixed methods on visual content.",
+    rule: "Not available for meetings. Name her in the HCDE ranking only if she makes your top 4.",
+    draft: null,
+    prep: []
+  },
+  {
     id: "blee",
     name: "Prof. Ben Lee",
     program: "UW iSchool",
     email: "bcgl@uw.edu",
     contactMode: "email",
-    priority: 7,
+    priority: 8,
     targetDate: "2026-10-20",
     why: "Lab for Computing Cultural Heritage: ML search over archives (GovScape, Newspaper Navigator). Skills match, weak topic match.",
     draft: null,
@@ -885,7 +939,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW HCDE",
     email: "",
     contactMode: "apply-only",
-    priority: 8,
+    priority: 10,
     targetDate: "2026-11-15",
     why: "Technologies for children and families. Recruiting 1, not available for meetings.",
     rule: "Not taking meetings. Name her in the HCDE faculty ranking instead.",
@@ -900,7 +954,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW iSchool",
     email: "",
     contactMode: "apply-only",
-    priority: 9,
+    priority: 11,
     targetDate: "2026-11-15",
     why: "AI reliability, agentic AI, AI evaluation. Skills match only; optional.",
     rule: "Not replying to applicant emails. Tag her in the application if you include her.",
