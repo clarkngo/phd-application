@@ -7,7 +7,7 @@
  *   - Research: Explainable AI (XAI) in Educational Systems, Human-in-the-loop Teacher Scaffolding
  *   - Visa: F-1. Seattle University Ed.D. removed (not admitting; F-1 / self-funded cohort model).
  *   - Target Faculty (verified recruiting for Autumn 2027 on 2026-09-26): iSchool — Katie Davis, Amy Ko, Jason Yip, Ben Lee;
- *     HCDE — Sayamindu Dasgupta, Julie Kientz, David McDonald
+ *     HCDE — Sayamindu Dasgupta, Gary Hsieh, Julie Kientz (+ adjunct James Pierce as co-adviser); re-checked 2026-10-23
  */
 
 const APPLICANT_PROFILE = {
@@ -352,7 +352,7 @@ const PROGRAMS_DATA = [
       "Julie Kientz is recruiting one student (children and families) but is NOT available for meetings. Name her in the rankings rather than asking for a call.",
       "Must re-orient the SoP from purely algorithmic XAI to interaction design, teacher user studies, cognitive load, and human-AI collaborative workflows."
     ],
-    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank Dasgupta, Kientz and McDonald (all recruiting); HCDE asks for 2–4 ranked faculty.",
+    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank Dasgupta and Hsieh (recruiting, HCDE primary), with Kientz as a third; consider James Pierce (adjunct) as a co-adviser for human-AI interaction. HCDE asks for 2–4 ranked faculty, and at least one must be a recruiting HCDE faculty member.",
 
     facultyMatches: [
       {
@@ -363,8 +363,8 @@ const PROGRAMS_DATA = [
         url: "https://www.hcde.washington.edu/dasgupta",
         labUrl: "https://unmad.in/",
         recruiting: "yes",
-        recruitingNote: "HCDE recruitment page: recruiting 1–2 students (how young people learn with digital technologies). Open to meetings.",
-        contactPolicy: "Meetings OK per HCDE's recruitment page. Email sdg1@uw.edu with a short, specific note.",
+        recruitingNote: "HCDE recruitment page (re-checked 2026-10-23): looking for 1–2 PhD students interested in designing and studying ways young people learn with digital technologies.",
+        contactPolicy: "The page doesn't state a meeting preference. A short, specific email to sdg1@uw.edu is reasonable. Don't push for a meeting.",
         howClarkCanHelp: "He builds systems that let kids create their own data-analysis tools and question data-driven systems, and has studied learners using tools in their home languages. Clark can build those tools full-stack and bring Tagalog and Mandarin localization experience.",
         alignment: "HCDE Rank #1. Best overlap of topic (learning with and about data and AI), skills, and availability."
       },
@@ -382,17 +382,17 @@ const PROGRAMS_DATA = [
         alignment: "HCDE Rank #2. Recruiting and topically relevant (learning technologies), though family-focused."
       },
       {
-        name: "Prof. David W. McDonald",
-        title: "Professor",
-        lab: "Directed Research Groups (CSCW / Social Computing)",
-        researchAreas: ["Social Computing", "Human-Centered AI", "CSCW", "Recommender & Matching Systems"],
-        url: "https://www.hcde.washington.edu/mcdonald",
-        labUrl: "https://www.hcde.washington.edu/research/mcdonald",
+        name: "Prof. James Pierce (adjunct)",
+        title: "Associate Professor, Interaction Design (School of Art + Art History + Design); HCDE adjunct",
+        lab: "Interaction design · human-AI interaction",
+        researchAreas: ["Human-AI Interaction", "Trust, Control & Privacy in AI Products", "Interaction Design Patterns", "Experimental Prototyping"],
+        url: "https://www.hcde.washington.edu/phd/application/faculty-recruitment",
+        labUrl: "",
         recruiting: "yes",
-        recruitingNote: "HCDE recruitment page: recruiting (open) in social computing and human-centered AI. Open to meetings.",
-        contactPolicy: "Meetings OK. Email dwmc@uw.edu.",
-        howClarkCanHelp: "His interest is systems that interleave computation with human activity. Clark's human-in-the-loop educator/AI dashboard idea and his full-stack skills fit here.",
-        alignment: "HCDE Rank #3. A safe recruiting pick on the human-centered AI side."
+        recruitingNote: "HCDE recruitment page (2026-10-23): looking to recruit 1 new student in smart sensing and AI products (trust, control, privacy), human-AI interaction, and/or speculative design.",
+        contactPolicy: "Adjunct: HCDE requires an adviser or co-adviser with a primary HCDE appointment, so he can co-advise only. Pair him with a recruiting HCDE primary faculty member (e.g., Dasgupta or Hsieh). Meeting preference not stated.",
+        howClarkCanHelp: "His focus on trust and control in AI products and on experimental prototyping matches Clark's question of when AI output earns a learner's or educator's trust, carried over from his 2024 XAI work. Clark can build working AI prototypes quickly.",
+        alignment: "HCDE co-adviser option: strong human-AI interaction fit. Must be paired with an HCDE primary faculty member."
       },
       {
         name: "Prof. Gary Hsieh",
@@ -402,16 +402,16 @@ const PROGRAMS_DATA = [
         url: "https://www.hcde.washington.edu/hsieh",
         labUrl: "",
         recruiting: "yes",
-        recruitingNote: "HCDE recruitment page: recruiting 1 student (GenAI or conversational agents for health). Open to meetings.",
-        contactPolicy: "Meetings OK.",
-        howClarkCanHelp: "Clark has hands-on experience building RAG and LLM applications, which fits the conversational-agent work. The application area is health, not education.",
-        alignment: "Alternate (skills match, domain mismatch)."
+        recruitingNote: "HCDE recruitment page (updated, re-checked 2026-10-23): looking to recruit up to 1 student on generative AI and the future of evidence-based work.",
+        contactPolicy: "Meeting preference not stated. Keep any email short and specific.",
+        howClarkCanHelp: "His focus has shifted from health to generative AI and evidence-based work. That's close to Clark's question of how educators make evidence-based decisions about AI. Clark brings hands-on RAG and LLM engineering.",
+        alignment: "HCDE Rank #2 (updated): his new topic is a much closer fit than before."
       }
     ],
 
     requirementsList: [
-      { id: "recruitment_check", label: "✅ Verified 2026-09-26: Dasgupta, Kientz, McDonald are recruiting; Turns is NOT. Re-check the recruitment page before submitting", completed: false },
-      { id: "faculty_meetings", label: "🎯 Sept–Oct: Request short meetings with Dasgupta and McDonald (both open to meetings). Do not ask Kientz for a meeting", completed: false },
+      { id: "recruitment_check", label: "✅ Re-checked 2026-10-23: Dasgupta, Hsieh (now GenAI and evidence-based work) and Kientz are recruiting; McDonald no longer lists a recruiting plan; Turns is not recruiting. Adjunct James Pierce is recruiting 1 (co-adviser only). Re-check before submitting", completed: false },
+      { id: "faculty_meetings", label: "🎯 Short emails to Dasgupta and Hsieh (meeting preference not stated). Do NOT ask Kientz or Starbird for meetings (both say no)", completed: false },
       { id: "sop", label: "Statement of Purpose (Reframe 2024 XAI proposal toward Human-Centered Interaction Design & advisor synergy)", completed: false },
       { id: "edi", label: "Equity, Diversity & Inclusion Statement (Leverage 2024 diversity narrative: AWS veterans & CodeDay)", completed: false },
       { id: "cv", label: "Curriculum Vitae (Highlight software architecture and research publications)", completed: false },
@@ -720,7 +720,7 @@ const ADMISSIONS_STRATEGY_VERIFICATION = {
       "Not every professor wants early contact. Amy Ko and Lucy Lu Wang explicitly ask applicants NOT to email, and Kientz is not taking meetings. Emailing them does not help and can hurt."
     ],
     recommendedTimeline: {
-      earlyOutreach: "Now – Oct 31: Contact only the faculty who welcome it (Davis, Yip, B. Lee, Dasgupta, McDonald). For those who don't, make a visible contribution instead (e.g., to Wordplay for Ko).",
+      earlyOutreach: "Now – Oct 31: Contact only the faculty who welcome it (Davis, Yip, B. Lee, Dasgupta, Hsieh, Pierce). For those who don't, make a visible contribution instead (e.g., to Wordplay for Ko).",
       earlySubmissionTarget: "By ~Nov 15: Submit with buffer for letters and transcripts.",
       hardDeadline: "Dec 2, 2026 (iSchool & HCDE) · Dec 4, 2026 (UW Education LSHD Ph.D.)"
     },
@@ -826,27 +826,43 @@ I have started contributing to that question in practice by reviewing Wordplay's
     name: "Prof. Sayamindu Dasgupta",
     program: "UW HCDE",
     email: "sdg1@uw.edu",
-    contactMode: "meeting",
+    contactMode: "email",
     priority: 4,
     targetDate: "2026-10-13",
-    why: "Young people learning with and about data; multilingual learner tools. Recruiting 1–2, open to meetings.",
+    why: "Young people learning with digital technologies, and with and about data; multilingual learner tools. Recruiting 1–2 (meeting preference not stated).",
     draft: null,
     prep: [
-      { id: "draft", label: "Draft a short meeting request tied to his home-language learner tools work" }
+      { id: "draft", label: "Draft a short email tied to his home-language learner tools work" }
     ]
   },
   {
-    id: "mcdonald",
-    name: "Prof. David W. McDonald",
+    id: "hsieh",
+    name: "Prof. Gary Hsieh",
     program: "UW HCDE",
-    email: "dwmc@uw.edu",
-    contactMode: "meeting",
+    email: "",
+    contactMode: "email",
     priority: 5,
-    targetDate: "2026-10-20",
-    why: "Social computing and human-centered AI. Recruiting (open), open to meetings.",
+    targetDate: "2026-10-30",
+    why: "Recruiting up to 1 student on generative AI and the future of evidence-based work (updated Oct 2026).",
     draft: null,
     prep: [
-      { id: "draft", label: "Draft a short meeting request (human-in-the-loop educator/AI tools angle)" }
+      { id: "read", label: "Read one recent paper of his on generative AI and knowledge work before writing" },
+      { id: "draft", label: "Draft a short email linking his topic to educators' evidence-based decisions about AI" }
+    ]
+  },
+  {
+    id: "pierce",
+    name: "Prof. James Pierce (HCDE adjunct)",
+    program: "UW HCDE (co-adviser)",
+    email: "",
+    contactMode: "email",
+    priority: 6,
+    targetDate: "2026-10-30",
+    why: "Recruiting 1 student: human-AI interaction, plus trust, control and privacy in AI products. Can co-advise only (HCDE requires an HCDE-primary adviser).",
+    draft: null,
+    prep: [
+      { id: "pair", label: "Decide which HCDE primary faculty member to pair him with (Dasgupta or Hsieh)" },
+      { id: "draft", label: "Draft a short email on trust and control in AI tools for novice programmers (ThinkCheck angle)" }
     ]
   },
   {
@@ -855,7 +871,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW iSchool",
     email: "bcgl@uw.edu",
     contactMode: "email",
-    priority: 6,
+    priority: 7,
     targetDate: "2026-10-20",
     why: "Lab for Computing Cultural Heritage: ML search over archives (GovScape, Newspaper Navigator). Skills match, weak topic match.",
     draft: null,
@@ -869,7 +885,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW HCDE",
     email: "",
     contactMode: "apply-only",
-    priority: 7,
+    priority: 8,
     targetDate: "2026-11-15",
     why: "Technologies for children and families. Recruiting 1, not available for meetings.",
     rule: "Not taking meetings. Name her in the HCDE faculty ranking instead.",
@@ -884,7 +900,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW iSchool",
     email: "",
     contactMode: "apply-only",
-    priority: 8,
+    priority: 9,
     targetDate: "2026-11-15",
     why: "AI reliability, agentic AI, AI evaluation. Skills match only; optional.",
     rule: "Not replying to applicant emails. Tag her in the application if you include her.",
