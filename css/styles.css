@@ -1815,6 +1815,7 @@ img {
 }
 
 .outreach-card.mode-meeting { border-left-color: var(--accent-blue); }
+.outreach-card.mode-form { border-left-color: var(--accent-blue); }
 .outreach-card.mode-apply-only { border-left-color: var(--accent-amber); }
 
 .outreach-head {
@@ -1860,6 +1861,7 @@ img {
 
 .contact-mode-pill.mode-email { background-color: color-mix(in srgb, var(--accent-green) 18%, transparent); color: var(--accent-green); }
 .contact-mode-pill.mode-meeting { background-color: color-mix(in srgb, var(--accent-blue) 18%, transparent); color: var(--accent-blue); }
+.contact-mode-pill.mode-form { background-color: color-mix(in srgb, var(--accent-blue) 18%, transparent); color: var(--accent-blue); }
 .contact-mode-pill.mode-apply-only { background-color: color-mix(in srgb, var(--accent-amber) 18%, transparent); color: var(--accent-amber); }
 
 .outreach-why,
