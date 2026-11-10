@@ -22,13 +22,13 @@ const APPLICANT_PROFILE = {
   },
   degrees: [
     {
-      degree: "Master of Science in Data Science (MSDS), in progress (Sep 2025 – expected Jun 2027)",
+      degree: "Master of Science in Data Science (MSDS), in progress (Oct 2025 – expected Jun 2027)",
       institution: "City University of Seattle",
       location: "Seattle, WA",
       focus: "Current F-1 program. Expected to finish before an Autumn 2027 PhD start"
     },
     {
-      degree: "Master of Science in Computer Science (MSCS), 2018–2019",
+      degree: "Master of Science in Computer Science (MSCS), completed Mar 2020",
       institution: "City University of Seattle",
       location: "Seattle, WA",
       focus: "Cloud Systems, Full-Stack Architecture, Serverless Computing, DevSecOps & AI Workflows"
@@ -106,7 +106,7 @@ const APPLICANT_PROFILE = {
     {
       title: "Apprenticeship Program Manager",
       organization: "Amazon Web Services (AWS) Apprenticeship Program at CityU",
-      description: "Led two cohorts consisting of 87 transitioning U.S. military service members and military spouses through an intensive 17-week technical career launch program."
+      description: "Led two cohorts consisting of 43 transitioning U.S. military service members and military spouses through an intensive 17-week technical career launch program."
     },
     {
       title: "Software Engineering Mentor",
@@ -140,7 +140,7 @@ const APPLICANT_PROFILE = {
   coreStrengths: [
     "3 Published Papers in applied computing, pedagogy, and cloud security (CONISAR, CISSE, UKC 2024)",
     "Strong backing from UW insider faculty: Dr. Sam Chung (14-year former UW professor/founder of BS in IT)",
-    "Demonstrated impact training 87 veterans/spouses (AWS grant) and teaching 11 CityU course sections (undergraduate and graduate)",
+    "Demonstrated impact training 43 veterans/spouses (40 moved on to AWS) (AWS grant) and teaching 11 CityU course sections (undergraduate and graduate)",
     "Compelling socio-technical research statement combining XAI, instructor agency, and educational equity"
   ],
   visaStatus: "F-1 (international student), currently through the CityU MSDS (expected Jun 2027). Funded, full-time, in-person programs only; Seattle University's Ed.D. ruled out on 2026-10-02.",
@@ -210,7 +210,7 @@ const PROGRAMS_DATA = [
         recruiting: "yes",
         recruitingNote: "Recruiting PhD students in youth, well-being, HCI and the learning sciences for the 2027 cycle.",
         contactPolicy: "Email OK (kdavis78@uw.edu). The iSchool FAQ says cold emails are welcomed. Keep it short and specific to her teacher/GenAI project.",
-        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark has been on the educator side of that question twice. He designed a RAG course for CityU's doctoral program (he did not teach it there), taught RAG to a faculty research group and in a workshop, and students went on to use RAG in capstones and papers. He also taught a vibe-coding workshop for high school and undergraduate students from Korea. He now assists in building CityU's BSAI program, courses and AI initiatives, where decisions about generative AI in the curriculum are part of the job. He can also build and deploy study tools. Supporting material: AI-Unplugged (K–12 AI-literacy activities, not yet tested with learners). Do NOT link the Alpha School 'classroom is broken' essay.",
+        howClarkCanHelp: "She is studying how teachers negotiate generative AI in their practice. Clark has been on the educator side of that question twice. He co-designed a RAG course for CityU's doctoral program with Dr. Sam Chung, building its code, diagrams and labs (he did not teach it there), taught RAG to a faculty research group and in a workshop, and students went on to use RAG in capstones and papers. He also taught a vibe-coding workshop for high school and undergraduate students from Korea. He now assists in building CityU's BSAI program, courses and AI initiatives, where decisions about generative AI in the curriculum are part of the job. He can also build and deploy study tools. Supporting material: AI-Unplugged (K–12 AI-literacy activities, not yet tested with learners). Do NOT link the Alpha School 'classroom is broken' essay.",
         alignment: "Rank #1. Closest topical match to Clark's 2024 XAI-in-education proposal (instructor agency over AI recommendations)."
       },
       {
@@ -352,7 +352,7 @@ const PROGRAMS_DATA = [
       "Julie Kientz is recruiting one student (children and families) but is NOT available for meetings. Name her in the rankings rather than asking for a call.",
       "Must re-orient the SoP from purely algorithmic XAI to interaction design, teacher user studies, cognitive load, and human-AI collaborative workflows."
     ],
-    recommendedPositioning: "Position as a Human-AI Interaction & Educational Technology Engineer: design and evaluate tools that let learners and educators question, steer and audit AI and data systems. Rank up to 4: Dasgupta, Hsieh and Tseng (recruiting, HCDE primary), then Kientz or Starbird; consider James Pierce (adjunct) as a co-adviser for human-AI interaction. HCDE asks for 2–4 ranked faculty, and at least one must be a recruiting HCDE faculty member.",
+    recommendedPositioning: "Position as a human-AI interaction researcher and engineer who studies how people keep their own judgment and relationships when they turn to AI, in personal life and in learning. Ranking (decided 2026-11-06): #1 Tseng, #2 Dasgupta, #3 Hsieh, #4 Kientz or Starbird (all recruiting, HCDE primary); consider James Pierce (adjunct) as a co-adviser for human-AI interaction. HCDE asks for 2–4 ranked faculty, and at least one must be a recruiting HCDE faculty member.",
 
     facultyMatches: [
       {
@@ -366,7 +366,7 @@ const PROGRAMS_DATA = [
         recruitingNote: "HCDE recruitment page (re-checked 2026-10-23): looking for 1–2 PhD students interested in designing and studying ways young people learn with digital technologies.",
         contactPolicy: "The page doesn't state a meeting preference. A short, specific email to sdg1@uw.edu is reasonable. Don't push for a meeting.",
         howClarkCanHelp: "He builds systems that let kids create their own data-analysis tools and question data-driven systems, and has studied learners using tools in their home languages. Clark can build those tools full-stack and bring Tagalog and Mandarin localization experience.",
-        alignment: "HCDE Rank #1. Best overlap of topic (learning with and about data and AI), skills, and availability."
+        alignment: "HCDE Rank #2. Best overlap with the learning side of his research (learning with and about data and AI)."
       },
       {
         name: "Prof. Julie Kientz",
@@ -379,20 +379,20 @@ const PROGRAMS_DATA = [
         recruitingNote: "HCDE recruitment page: recruiting 1 student (computing technologies with children and families).",
         contactPolicy: "NOT available for meetings. Don't ask for a call. Name her in the application's faculty rankings.",
         howClarkCanHelp: "Clark can rapidly build high-fidelity prototypes for her field deployments with families and learners.",
-        alignment: "HCDE Rank #2. Recruiting and topically relevant (learning technologies), though family-focused."
+        alignment: "HCDE Rank #4 option (or Starbird). Recruiting and topically relevant (learning technologies), though family-focused."
       },
       {
         name: "Prof. Emily Tseng",
         title: "Assistant Professor (joined HCDE 2026)",
         lab: "Sociotechnical Safety Lab",
-        researchAreas: ["Responsible AI & AI Safety", "Participatory AI Evaluation & Governance", "Social & Emotional Uses of AI", "Security & Privacy"],
+        researchAreas: ["Sociotechnical Safety", "Decentralized AI (small & private LMs)", "Social & Emotional Uses of AI", "Participatory AI Governance"],
         url: "https://www.hcde.washington.edu/tseng",
         labUrl: "https://emtseng.me/",
         recruiting: "yes",
-        recruitingNote: "HCDE recruitment page (2026-10-23): open to students on (1) social and emotional uses of AI and their safety, and (2) participatory governance and community control over AI in high-risk domains. Her lab is part of Microsoft's External Red Team Alliance (EXTRA).",
-        contactPolicy: "Watch her information session recording first (linked from the HCDE recruitment page). Meeting preference not stated. Email: emtseng@uw.edu.",
-        howClarkCanHelp: "Education is widely treated as a high-risk AI domain, and Clark's BSAI disclosure policy is a case of an institution governing AI use. ThinkCheck is a participatory-style AI evaluation. His AI red-team and evaluation side projects (OWASP LLM Top 10 catalog, eval harness) match her lab's red-teaming work.",
-        alignment: "HCDE Rank #2–3 candidate: governance and evaluation of AI in a high-risk domain (education and youth) fits both his research question and his engineering skills."
+        recruitingNote: "HCDE recruitment page (2026-10-23): open to students on (1) social and emotional uses of AI and their safety, and (2) participatory governance and community control over AI in high-risk domains. Lab page (2026-11-02): at most 1–2 students this cycle, open to co-advising in CSE and the iSchool. Her lab is part of Microsoft's External Red Team Alliance (EXTRA).",
+        contactPolicy: "Use the lab's form, not email: \"Joining the Sociotechnical Safety Lab\" at emtseng.me/lab. She replies if there is a fit. Watch her information session recording first (linked from the HCDE recruitment page).",
+        howClarkCanHelp: "Her CHI '26 paper with Calvin Liang (\"Chat, Should I Leave Him?\") treats sycophancy and overreliance as risks in everyday AI advice, the same question of handing judgment to AI that Clark studies in novice programmers. Education is widely treated as a high-risk AI domain, and his BSAI disclosure policy is a case of an institution governing AI use. His AI red-team and evaluation side projects (OWASP LLM Top 10 catalog, eval harness) match her lab's red-teaming work, and his in-progress Agent-Poison benchmark tests prompt-injection defenses on small open-weight models run locally, her 2026 \"decentralized AI\" topic.",
+        alignment: "HCDE Rank #1 (decided 2026-11-06). Proposed topic: how people use AI chatbots to navigate social life after job loss, extending her CHI '26 relationship-advice study; plus safety of small, private models."
       },
       {
         name: "Prof. Kate Starbird",
@@ -431,7 +431,7 @@ const PROGRAMS_DATA = [
         recruitingNote: "HCDE recruitment page (updated, re-checked 2026-10-23): looking to recruit up to 1 student on generative AI and the future of evidence-based work.",
         contactPolicy: "Meeting preference not stated. Keep any email short and specific.",
         howClarkCanHelp: "His focus has shifted from health to generative AI and evidence-based work. That's close to Clark's question of how educators make evidence-based decisions about AI. Clark brings hands-on RAG and LLM engineering.",
-        alignment: "HCDE Rank #2 (updated): his new topic is a much closer fit than before."
+        alignment: "HCDE Rank #3: his new topic is a much closer fit than before."
       }
     ],
 
@@ -774,6 +774,7 @@ const ADMISSIONS_STRATEGY_VERIFICATION = {
 // contactMode drives what "outreach" means for each advisor:
 //   "email"      — cold email welcomed
 //   "meeting"    — open to meetings (HCDE recruitment page)
+//   "form"       — contact through the lab's interest form, not email
 //   "apply-only" — faculty asked NOT to be emailed / not taking meetings; name them in the application instead
 const OUTREACH_DATA = [
   {
@@ -782,25 +783,11 @@ const OUTREACH_DATA = [
     program: "UW iSchool",
     email: "kdavis78@uw.edu",
     contactMode: "email",
-    priority: 1,
+    priority: 2,
     targetDate: "2026-10-17",
     why: "AI & Education; studying how teachers negotiate generative AI in their professional practice.",
-    draft: {
-      subject: "Prospective PhD applicant (Autumn 2027): the boundaries educators draw around generative AI",
-      body: `Dear Professor Davis,
-
-I read "Relief or Displacement?" (CHI 2026) with a jolt of recognition. One teacher's rule, that AI is fine while students are growing but at mastery time they must show they can do it without that support, is almost exactly a line I have been drawing, without evidence, in computing education.
-
-I'm applying to the iSchool PhD program for Autumn 2027. I taught 11 course sections at City University of Seattle in 2020–2021, mostly full-stack web development, Linux and cybersecurity. Since then I have made three different calls about how much learners need to understand the code behind their work. In a RAG course I designed for our doctoral program, we provided the code so students could focus on architecture. In a vibe-coding workshop I taught for high school and undergraduate students from Korea, students only had to present their app and idea. In CityU's new Bachelor of Science in AI program, which I'm helping build, students must disclose their AI use, because understanding matters more.
-
-Your study focused on K–12 teachers in one district and called for research across other settings. I'd like to study the boundaries educators draw in computing education, where AI can now write the very thing students are learning to make, and what those boundaries mean for young people's ability to evaluate, explain and fix what AI builds for them. I can also build and deploy the tools such studies need.
-
-Are you considering students for Autumn 2027 with interests in this direction? My CV is attached, and I'd welcome a brief conversation if it would be useful.
-
-Best regards,
-Clark Ngo
-clarkngo.github.io`
-    },
+    rule: "Email sent 2026-11-06 with the updated academic CV. If there is no reply, send one short follow-up around Nov 16 (10 days). The draft was removed from this public page; a private copy is kept offline.",
+    draft: null,
     prep: [
       { id: "paper", label: "Read Relief or Displacement? (CHI '26) sections 4.3 and 5. The email opens with it" },
       { id: "sections", label: "Confirm \"11 course sections, 2020–2021\" is your full teaching record" },
@@ -815,7 +802,7 @@ clarkngo.github.io`
     program: "UW iSchool (or CSE)",
     email: "",
     contactMode: "apply-only",
-    priority: 2,
+    priority: 3,
     targetDate: "2026-11-15",
     why: "Computing education research (CER): accessible, multilingual programmable media (Wordplay) and culturally responsive computing teaching.",
     rule: "Do NOT email a CV or proposal and do not ask for a meeting. She reads every application that names her. Only write with a specific question about her lab's recent research.",
@@ -839,7 +826,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW iSchool",
     email: "jcyip@uw.edu",
     contactMode: "email",
-    priority: 3,
+    priority: 4,
     targetDate: "2026-10-13",
     why: "KidsTeam UW: co-design with children, generative AI and children's creativity, AI literacy.",
     draft: null,
@@ -853,7 +840,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW HCDE",
     email: "sdg1@uw.edu",
     contactMode: "email",
-    priority: 4,
+    priority: 5,
     targetDate: "2026-10-13",
     why: "Young people learning with digital technologies, and with and about data; multilingual learner tools. Recruiting 1–2 (meeting preference not stated).",
     draft: null,
@@ -867,7 +854,7 @@ I have started contributing to that question in practice by reviewing Wordplay's
     program: "UW HCDE",
     email: "",
     contactMode: "email",
-    priority: 5,
+    priority: 6,
     targetDate: "2026-10-30",
     why: "Recruiting up to 1 student on generative AI and the future of evidence-based work (updated Oct 2026).",
     draft: null,
@@ -895,15 +882,18 @@ I have started contributing to that question in practice by reviewing Wordplay's
     id: "tseng",
     name: "Prof. Emily Tseng",
     program: "UW HCDE",
-    email: "emtseng@uw.edu",
-    contactMode: "email",
-    priority: 6,
-    targetDate: "2026-10-30",
-    why: "Sociotechnical Safety Lab: participatory governance of AI in high-risk domains, social and emotional uses of AI, AI red-teaming (Microsoft EXTRA).",
+    email: "",
+    contactMode: "form",
+    priority: 1,
+    targetDate: "2026-11-06",
+    why: "Sociotechnical Safety Lab: social and emotional uses of AI, participatory governance of AI in high-risk domains, AI red-teaming (Microsoft EXTRA). At most 1–2 students this cycle.",
+    rule: "Lab form submitted 2026-11-06. Don't email or follow up; she replies only if there is a fit. Next: name her as HCDE #1 in the application (due Dec 2).",
     draft: null,
     prep: [
       { id: "session", label: "Watch her information session recording (linked on the HCDE recruitment page)" },
-      { id: "draft", label: "Draft a short email: governing AI use in education (a high-risk domain), BSAI disclosure policy, ThinkCheck as an AI evaluation" }
+      { id: "paper", label: "Read \"Chat, Should I Leave Him?\" (Tseng & Liang, CHI '26) in full: https://doi.org/10.1145/3772318.3790739" },
+      { id: "skills", label: "Show 3 of her 4 roles (analyst, writer, builder, organizer): builder and organizer are strong; analyst is partial (Agent-Poison) until ThinkCheck adds a human-facing harm" },
+      { id: "draft", label: "Draft the lab form answers: 1–3 papers with reasons, why her specifically, research experience, growth areas" }
     ]
   },
   {

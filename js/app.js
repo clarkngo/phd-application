@@ -655,12 +655,14 @@ function renderFacultyView() {
 const OUTREACH_STATUSES = {
   email: ["Not started", "Drafting", "Ready to send", "Sent", "Replied", "Meeting scheduled", "No reply (closed)"],
   meeting: ["Not started", "Drafting", "Ready to send", "Sent", "Replied", "Meeting scheduled", "No reply (closed)"],
+  form: ["Not started", "Drafting", "Ready to send", "Sent", "Replied", "Meeting scheduled", "No reply (closed)"],
   "apply-only": ["Not started", "Preparing", "Named in application"]
 };
 
 const CONTACT_MODE_LABELS = {
   email: "Email welcome",
   meeting: "Open to meetings",
+  form: "Use lab form",
   "apply-only": "Don't email: name in application"
 };
 
@@ -696,7 +698,9 @@ function escapeHtml(str) {
     .replace(/"/g, "&quot;");
 }
 
-function isFollowUpDue(entry) {
+function isFollowUpDue(entry, advisor) {
+  // Lab-form contacts reply only if there is a fit, so never prompt a follow-up.
+  if (advisor && advisor.contactMode === "form") return false;
   if (entry.status !== "Sent" || !entry.sentDate) return false;
   const sent = new Date(`${entry.sentDate}T00:00:00`);
   const days = (Date.now() - sent.getTime()) / 86400000;
@@ -716,7 +720,7 @@ function renderOutreachView() {
   const count = pred => entries.filter(pred).length;
   const contacted = count(({ entry }) => ["Sent", "Replied", "Meeting scheduled", "No reply (closed)"].includes(entry.status));
   const replied = count(({ entry }) => ["Replied", "Meeting scheduled"].includes(entry.status));
-  const followUps = count(({ entry }) => isFollowUpDue(entry));
+  const followUps = count(({ advisor, entry }) => isFollowUpDue(entry, advisor));
   const overdue = count(({ advisor, entry }) => advisor.targetDate < today && ["Not started", "Drafting", "Preparing"].includes(entry.status));
 
   summary.innerHTML = `
@@ -729,7 +733,7 @@ function renderOutreachView() {
   list.innerHTML = entries.map(({ advisor: a, entry }) => {
     const statuses = OUTREACH_STATUSES[a.contactMode];
     const prepDone = a.prep.filter(p => entry.prep && entry.prep[p.id]).length;
-    const followUp = isFollowUpDue(entry);
+    const followUp = isFollowUpDue(entry, a);
     const late = a.targetDate < today && ["Not started", "Drafting", "Preparing"].includes(entry.status);
     const draftText = a.draft ? `${a.draft.subject}\n\n${a.draft.body}` : "";
     const draftHtml = a.draft
