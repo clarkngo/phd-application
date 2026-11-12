@@ -806,18 +806,13 @@ const OUTREACH_DATA = [
     targetDate: "2026-11-15",
     why: "Computing education research (CER): accessible, multilingual programmable media (Wordplay) and culturally responsive computing teaching.",
     rule: "Do NOT email a CV or proposal and do not ask for a meeting. She reads every application that names her. Only write with a specific question about her lab's recent research.",
-    draft: {
-      subject: "Statement of Purpose paragraph (not an email)",
-      body: `I am applying to work with Professor Amy Ko on multilingual programmable media for learners. I grew up Filipino-Chinese in the Philippines, moving between English, Tagalog and Mandarin, and was mocked for my Mandarin before I became fluent enough to lead Mandarin-speaking analyst focus groups for five years. Almost every programming language a learner meets assumes English. I want to understand what changes when it doesn't: [YOUR RESEARCH QUESTION — e.g., how do bilingual novices move between a home-language and an English programming environment, and how does that shape whether they see computing as theirs?].
-
-I have started contributing to that question in practice by reviewing Wordplay's machine-translated Tagalog strings [N STRINGS REVIEWED / PR LINK — only once done]. My CONISAR 2021 paper on lowering the barrier to full-stack web development, and teaching 11 course sections at City University of Seattle, showed me where learners get stuck. But as Professor Ko's CER FAQ puts it, teaching is not research. Her lab is where I would learn to study these barriers through discovery and invention, not only address them in my own classroom.`
-    },
+    draft: null,
     prep: [
       { id: "cerfaq", label: "Read her CER FAQ and at least one foundation text it lists (e.g., How People Learn, Stuck in the Shallow End)" },
       { id: "wordplay", label: "Review Wordplay's Tagalog strings in-app (Settings → ✎ localization mode). 6,783 machine-translated strings await review as of 2026-09-26" },
       { id: "question", label: "Write your own research question for the bracketed sentence (not a tool idea)" },
       { id: "name", label: "Name her in the iSchool faculty ranking (she also accepts CSE applicants)" },
-      { id: "backup", label: "Once copied into your SoP: back up this text to your MS Word doc, then ask Claude to remove it from this public site" }
+      { id: "backup", label: "Draft removed from this public site 2026-11-11 (private copy kept offline)" }
     ]
   },
   {
